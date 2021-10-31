@@ -1,0 +1,44 @@
+header.Header
+  .Container.Container-header
+    .Header_top
+      a(href="/").Logo.Header_logo
+        img(src="img/logo.svg" alt="Logo").Logo_img
+      .CircleBtns.Header_circleBtns
+        a(href="#").BtnOutline.hidden-xs Квартиры
+        a(href="#").MenuHamburger.CircleBtn.CircleBtn-menuHamburger.CircleBtns_hamburgerBtn
+        a(href="#").CircleBtn.CircleBtn-phone.hidden-mdPlus
+      .Call.hidden-smMinus
+        a(href="#").Phone +7 (3842) 23-33-73
+        a(href="#").BtnDefault Заказать звонок
+    .Header_textWrapper
+      h1.SectionTitle.SectionTitle-header.Header_title Счастье любит тишину
+      .Header_text ЖК «Тихий Бульвар»
+    a(href="#").BtnDefault.BtnDefault-header.Header_apartmentsBtn.hidden-smPlus Квартиры
+    a(href="#").MoreBtn.Header_moreBtn
+.MobileNavigation
+  .Container.Container-header
+    .MobileNavigation_header
+      a(href="/").Logo
+        img(src="img/logo.svg" alt="Logo").Logo_img
+      .CircleBtns.CircleBtns-mobileNavigation
+        a(href="#").MenuHamburger.CircleBtn.CircleBtn-close.MobileNavigation_closeBtn
+        a(href="#").CircleBtn.CircleBtn-phone
+    .MainMenu.MobileNavigation_mainMenu
+      ul.MainMenu_menu
+        li.MainMenu_item
+          a(href="#").MainMenu_link О &nbsp;проекте
+        li.MainMenu_item
+          a(href="#").MainMenu_link.MainMenu_link-active Расположение
+        li.MainMenu_item
+          a(href="#").MainMenu_link Преимущества
+        li.MainMenu_item
+          a(href="#").MainMenu_link Квартиры
+        li.MainMenu_item
+          a(href="#").MainMenu_link Отделка
+        li.MainMenu_item
+          a(href="#").MainMenu_link Ипотека
+        li.MainMenu_item
+          a(href="#").MainMenu_link Застройщик
+        li.MainMenu_item
+          a(href="#").MainMenu_link Ход строительства
+    a(href="#").BtnDefault.MobileNavigation_btn Выбрать квартиру

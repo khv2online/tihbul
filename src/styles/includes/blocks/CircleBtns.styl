@@ -1,0 +1,21 @@
+.CircleBtns
+	display grid
+	grid-template-columns auto auto
+	justify-content start
+	align-items center
+	gap 16px
+	
+	@media $smPlus
+		grid-template-columns auto auto auto
+	
+	@media $lgPlus
+		grid-template-columns auto auto
+		gap 24px
+	
+	&_hamburgerBtn
+		@media $mdPlus
+			order -1
+	
+	&-mobileNavigation
+		@media $mdPlus
+			grid-template-columns auto auto

@@ -1,0 +1,119 @@
+.Header
+	position relative
+	padding 24px 0
+	background url('../img/bg_header.webp') -60px 0 / auto 100% no-repeat
+	
+	@media $smPlus
+		padding 48px 0
+		background-position -128px 0
+	
+	@media $mdPlus
+		display grid
+		min-height 100vh
+		background-position center 0
+		background-size auto
+	
+	@media $xlPlus
+		background-size cover
+	
+	&::before
+		content ""
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		left 0
+		background rgba($black, .4)
+	
+	&::after
+		content ""
+		position absolute
+		top 0
+		right 0
+		left 0
+		height 580px
+		background linear-gradient(180deg, rgba(33, 16, 0, 0) 0%, #211200 100%)
+		opacity 0.7
+		transform matrix(1, 0, 0, -1, 0, 0)
+	
+	&_top
+		display grid
+		grid-template-columns auto auto
+		justify-content space-between
+		align-items start
+		margin-bottom 80px
+		
+		@media $smPlus
+			margin-bottom 312px
+		
+		@media $mdPlus
+			grid-template-columns auto auto auto
+			margin-bottom 20px
+		
+		@media $xlPlus
+			margin-bottom 342px
+	
+	&_logo
+		@media $mdPlus
+			margin-left 55px
+		
+		@media $lgPlus
+			margin-left 165px
+	
+	&_circleBtns
+		@media $mdPlus
+			order -1
+	
+	&_title
+		margin-bottom 1px
+		
+		@media $smPlus
+			margin-bottom 40px
+		
+		@media $xlPlus
+			margin-bottom 0
+	
+	&_textWrapper
+		margin-bottom 30px
+		text-align center
+		
+		@media $sm
+			margin-bottom 220px
+		
+		@media $mdPlus
+			margin-top 40px
+			margin-bottom 40px
+		
+		@media $xlPlus
+			margin-top 0
+			margin-bottom 288px
+	
+	&_text
+		color $white
+		font-size 20px
+		line-height 37px
+		letter-spacing 0.02em
+		
+		@media $sm
+			font-size 24px
+			line-height 44px
+		
+		@media $xlPlus
+			font-size 24px
+			line-height 44px
+	
+	&_apartmentsBtn
+		width 288px
+		justify-self center
+		margin-bottom 67px
+	
+	&_moreBtn
+		justify-self center
+		margin-bottom -67px
+		
+		@media $smPlus
+			margin-bottom -103px
+		
+		@media $mdPlus
+			align-self end
+			margin-bottom -47px

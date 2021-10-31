@@ -1,0 +1,40 @@
+.MobileNavigation
+  position fixed
+  z-index 100
+  top 0
+  right 0
+  bottom 0
+  left 0
+  padding 24px 0
+  background $brown
+  opacity 0
+  visibility hidden
+  overflow-y auto
+  @extend .transition
+  
+  @media $smPlus
+    padding 48px 0
+  
+  &_header
+    display grid
+    grid-template-columns auto auto
+    justify-content space-between
+    align-items start
+    margin-bottom 48px
+    
+    @media $smPlus
+      margin-bottom 84px
+  
+  &_mainMenu
+    margin-bottom 41px
+    
+    @media $smPlus
+      margin-bottom 113px
+  
+  &_btn
+    width 288px
+    justify-self center
+  
+  &-opened
+    visibility visible
+    opacity 1

@@ -1,0 +1,26 @@
+.MainMenu
+	&_menu
+		text-align center
+		list-style none
+	
+	&_item
+		color $white
+		font-size 18px
+		line-height 28px
+		letter-spacing 0.02em
+		
+		@media $smPlus
+			font-size 24px
+			line-height 44px
+		
+		&:not(:last-child)
+			margin-bottom 24px
+		
+	&_link
+		color $white
+		text-decoration none
+		@extend .transition
+		
+		&:hover,
+		&-active
+			color $sandy
