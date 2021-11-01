@@ -1,0 +1,170 @@
+.About
+	position relative
+	padding 32px 0 39px	
+	background $brown url("data:image/svg+xml,%3Csvg width='320' height='1502' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M242.807 63.253c-12.845 15.854-21.2 42.457-23.772 53.776-5.067 22.791-17.871 73.908-28.552 96.051-13.351 27.678-26.05 15.955-26.376 0-.326-15.956-12.374-39.076-28.004 0-15.63 39.075-53.078 135.136-61.87 107.132-8.792-28.004-21.491-6.838-38.75 20.84-17.258 27.679-61.218 85.315-53.729 17.258 7.49-68.056-51.17-.415-87.268 53.404-35.82 53.403-100.945 82.71-135.788 58.288L-234.789 1498h708.508V14.366c-12.429-6.682-45.25-16.787-77.094-3.747-39.805 16.3-93.028 74.586-110.259 85.904-17.232 11.319-14.865-9.878-14.628-13.09.237-3.21 2.861-15.243 1.897-28.416-.964-13.172-14.773-11.582-30.828 8.236Z' fill='%23476D5C' stroke='%23FCE7C7' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 0 0 no-repeat
+	background-position 0 691px
+	background-size 100% auto
+	// overflow-x hidden
+	
+	// @media $lgMinus
+	
+	@media $smPlus
+		padding 65px 0 39px
+		background-image url("data:image/svg+xml,%3Csvg width='768' height='2242' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M524.056 189.887c-39.445 48.688-65.104 130.383-73.002 165.144C435.493 425.021 396.171 582 363.371 650c-41 85-80.001 49-81.001 0-.999-49-38-120-86 0-48 120.001-163 415-190 329s-66-20.999-119 64c-53 85-188 262-165 53s-157.144-1.28-268 164c-109.999 164-309.999 254-416.999 179l20 795H1233.18V39.755c-38.17-20.52-138.96-51.55-236.752-11.505C874.187 78.306 710.741 257.3 657.824 292.059c-52.917 34.759-45.65-30.337-44.922-40.198.728-9.861 8.788-46.813 5.827-87.266-2.962-40.452-45.367-35.568-94.673 25.292Z' fill='%23476D5C' stroke='%23FCE7C7' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+		background-position 0 490px
+	
+	@media $lgPlus
+		// padding 100px 0
+		padding 100px 0 71px
+		background-image none
+		
+		&::after
+			content ""
+			position absolute
+			top -116px
+			right 0
+			left 0
+			// bottom 0
+			// bottom -78px
+			// width 1920px
+			height 2242px
+			background url("data:image/svg+xml,%3Csvg width='1920' height='2242' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1441.69 189.886c-39.45 48.688-65.11 130.383-73.01 165.144-15.56 69.99-54.88 226.969-87.68 294.969-41 85-80 49-81 0-1-48.999-38-120-86 0C1066 770 951 1065 924 978.999c-27-86-66-20.999-119 64.001s-188 262-165 53c23-209.001-157.145-1.28-268 164-110 164-310 254-417 179l20 795h2175.81V39.754c-38.17-20.52-138.96-51.55-236.75-11.505-122.24 50.056-285.69 229.051-338.61 263.809-52.91 34.759-45.65-30.337-44.92-40.198.73-9.861 8.79-46.813 5.83-87.266-2.96-40.452-45.37-35.568-94.67 25.292Z' fill='%23476D5C' stroke='%23FCE7C7' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 0 / cover no-repeat
+			pointer-events none
+	
+	&_container,
+	&_textAndImg
+		z-index 1
+	// 	display grid
+	// 	grid-template-columns 100%
+	// 	z-index 1
+		
+	// 	@media $lgPlus
+	// 		gap 28px
+	
+	&_block
+		@media $lgPlus
+			display grid
+			grid-template-columns auto auto
+	
+	&_textBlock
+		margin-bottom 32px
+		
+		@media $sm
+			width 650px
+		
+		@media $smPlus
+			margin-bottom 72px
+			
+		// @media $smPlus
+		// 	width 650px
+		// 	margin-bottom 72px
+		
+		@media $lgPlus
+			margin-bottom 137px
+		// 	width auto
+		// 	margin-bottom 0
+		
+		&:last-child
+			margin-bottom 0
+		
+		&-location
+			@media $xs
+				margin-right -10px
+				margin-left 10px
+		
+		&-fullWidthTablet
+			@media $smPlus
+				width auto
+				margin-bottom 91px
+			
+			@media $lgPlus
+				max-width 528px
+				// margin-bottom 0
+				margin-bottom 131px
+	
+	&_advantagesWrapper
+		display grid
+		grid-template-columns auto
+		
+		@media $lgPlus
+			grid-template-rows auto 1fr
+			margin-bottom 112px
+	
+	&_advantages
+		margin-bottom 52px
+		
+		@media $smPlus
+			width 687px
+			margin-bottom 122px
+	
+	&_circleImgWrapper
+		justify-self end
+		position relative
+		margin-right -77px
+		margin-bottom 35px
+		
+		@media $smPlus
+			margin-right 25px
+			margin-bottom 99px
+		
+		@media $lgPlus
+			grid-area 1 / 2 / 3 / 3
+			margin-top -11px
+			margin-right 0
+			margin-bottom 0
+			margin-left -16px
+	
+	&_circleImg
+		border-radius 50%
+		width 365px
+		max-width none
+		
+		@media $smPlus
+			width 654px
+	
+	&_leavesImg
+		position absolute
+		top 31px
+		right -63px
+		width 179px
+		
+		@media $smPlus
+			top 57px
+			right -112px
+			width 320px
+	
+	&_textAndImg
+		position relative
+		display grid
+		grid-template-columns auto
+		margin-right 15px
+		margin-left 15px
+		
+		@media $lgPlus
+			grid-template-columns 43% 1fr
+			justify-items end
+			align-items end
+			margin-bottom 81px
+	
+	&_imgWrapper
+		justify-self end
+		margin -17px -16px 2px
+		
+		@media $smPlus
+			margin-bottom 11px
+	
+	// &_imgWrapper
+	// 	justify-self end
+		// margin -17px -16px 2px
+		
+		// @media $smPlus
+		// 	margin -17px -32px 10px
+		
+		// @media $lgPlus
+		// 	margin-right -300px
+	
+	&_img
+		filter drop-shadow(0px 15px 40px rgba(0, 36, 77, 0.1))
+		
+		@media $lgPlus
+			max-width none

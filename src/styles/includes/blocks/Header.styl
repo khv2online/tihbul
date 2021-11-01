@@ -4,7 +4,8 @@
 	background url('../img/bg_header.webp') -60px 0 / auto 100% no-repeat
 	
 	@media $smPlus
-		padding 48px 0
+		padding 48px 0 10px
+		// padding 48px 0
 		background-position -128px 0
 	
 	@media $mdPlus
@@ -14,6 +15,7 @@
 		background-size auto
 	
 	@media $xlPlus
+		padding-bottom 55px
 		background-size cover
 	
 	&::before
@@ -31,10 +33,21 @@
 		top 0
 		right 0
 		left 0
-		height 580px
+		height 295px
 		background linear-gradient(180deg, rgba(33, 16, 0, 0) 0%, #211200 100%)
 		opacity 0.7
 		transform matrix(1, 0, 0, -1, 0, 0)
+		
+		@media $smPlus
+			height 579px
+	
+	&_container
+		display grid
+		grid-template-columns auto
+		z-index 1
+		
+		@media $mdPlus
+			align-items start
 	
 	&_top
 		display grid
@@ -109,11 +122,11 @@
 	
 	&_moreBtn
 		justify-self center
-		margin-bottom -67px
+		// margin-bottom -67px
 		
-		@media $smPlus
-			margin-bottom -103px
+		// @media $smPlus
+		// 	margin-bottom -103px
 		
 		@media $mdPlus
 			align-self end
-			margin-bottom -47px
+			// margin-bottom -47px

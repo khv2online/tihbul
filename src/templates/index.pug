@@ -1,4 +1,41 @@
 extends layouts/base
 
 block content
-  
+	.About
+		.Container.About_container
+			.About_advantagesWrapper
+				.TextBlock.About_textBlock
+					h2.SectionTitle.TextBlock_title О проекте
+					.Text.Text-larger
+						p ЖК «Тихий Бульвар» – это жилой комплекс класса «Комфорт», который расположился в новой развивающейся локации Ленинского района города Кемерово – на Верхнем Бульваре.
+				.Advantages.About_advantages
+					.Advantage.Advantages_item
+						.Advantage_iconWrapper
+							img(src="/img/advantages/brick.svg")
+						.Advantage_text Дом из полнотелого кирпича
+					.Advantage.Advantages_item
+						.Advantage_iconWrapper
+							img(src="/img/advantages/parking.svg")
+						.Advantage_text Удобный подземный паркинг
+					.Advantage.Advantages_item
+						.Advantage_iconWrapper
+							img(src="/img/advantages/public_space.svg")
+						.Advantage_text Современные общественные пространства
+					.Advantage.Advantages_item
+						.Advantage_iconWrapper
+							img(src="/img/advantages/furnish.svg")
+						.Advantage_text Качественная предчистовая отделка
+				.About_circleImgWrapper
+					img(src="/img/real_estate.webp" alt="Real estate").About_circleImg
+					img(src="/img/leaves.webp" alt="Leaves").About_leavesImg
+		.About_textAndImg
+			.TextBlock.About_textBlock.About_textBlock-fullWidthTablet
+				.Text.Text-centerMob.Text-larger Два дома переменной этажности #[br]с акцентными башнями и строгим фасадом отвечают всем современным требованиям, которые предъявляются #[br]к комфортному жилью.
+			.About_imgWrapper
+				img(src="/img/real_estate2_mob.webp" alt="Real estate").About_img.hidden-smPlus
+				img(src="/img/real_estate2_tablet.webp" alt="Real estate").About_img.hidden-xs.hidden-lgPlus
+				img(src="/img/real_estate2.webp" alt="Real estate").About_img.hidden-lgMinus
+		.Container.About_container
+			.TextBlock.TextBlock-location.About_textBlock.About_textBlock-location
+				h2.SectionTitle.TextBlock_title Расположение
+				.Text.TextBlock_text В пешей доступности - детские сады, школы, высшие учебные заведения, ФОК «Кузбасс», плавательный бассейн «Сибирь», множество магазинов в формате «у дома». Гипермаркеты «Лента», «Леруа Мерлен» и METRO – всего в нескольких минутах езды. #[br.hidden-xs]Транспортная доступность – общественный транспорт #[br]и объездные дороги

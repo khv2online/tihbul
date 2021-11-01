@@ -1,0 +1,23 @@
+.Advantage
+	display grid
+	grid-template-columns 80px 1fr
+	align-items center
+	gap 34px
+	
+	@media $smPlus
+		grid-template-columns auto
+		grid-template-rows 64px 1fr
+		gap 29px
+	
+	&_iconWrapper
+		@media $xs
+			text-align center
+	
+	&_text
+		color $sandy
+		font-size 16px
+		line-height 24px
+		letter-spacing 0.02em
+		
+		@media $smPlus
+			align-self start
