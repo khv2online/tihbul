@@ -15,13 +15,12 @@
 	
 	@media $lgPlus
 		// padding 100px 0
-		padding 100px 0 71px
 		background-image none
 		
 		&::after
 			content ""
 			position absolute
-			top -116px
+			top -20px
 			right 0
 			left 0
 			// bottom 0
@@ -30,6 +29,13 @@
 			height 2242px
 			background url("data:image/svg+xml,%3Csvg width='1920' height='2242' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1441.69 189.886c-39.45 48.688-65.11 130.383-73.01 165.144-15.56 69.99-54.88 226.969-87.68 294.969-41 85-80 49-81 0-1-48.999-38-120-86 0C1066 770 951 1065 924 978.999c-27-86-66-20.999-119 64.001s-188 262-165 53c23-209.001-157.145-1.28-268 164-110 164-310 254-417 179l20 795h2175.81V39.754c-38.17-20.52-138.96-51.55-236.75-11.505-122.24 50.056-285.69 229.051-338.61 263.809-52.91 34.759-45.65-30.337-44.92-40.198.73-9.861 8.79-46.813 5.83-87.266-2.96-40.452-45.37-35.568-94.67 25.292Z' fill='%23476D5C' stroke='%23FCE7C7' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") right 0 / cover no-repeat
 			pointer-events none
+	
+	@media $xlPlus
+		&::after
+			top -116px
+	
+	@media $xlPlus
+		padding 100px 0 71px
 	
 	&_container,
 	&_textAndImg
@@ -54,12 +60,11 @@
 		
 		@media $smPlus
 			margin-bottom 72px
-			
-		// @media $smPlus
-		// 	width 650px
-		// 	margin-bottom 72px
 		
-		@media $lgPlus
+		// @media $lg
+		// 	margin-bottom 100px
+		
+		@media $xlPlus
 			margin-bottom 137px
 		// 	width auto
 		// 	margin-bottom 0
@@ -88,6 +93,9 @@
 		
 		@media $lgPlus
 			grid-template-rows auto 1fr
+			margin-bottom 80px
+		
+		@media $lgPlus
 			margin-bottom 112px
 	
 	&_advantages
@@ -121,6 +129,12 @@
 		
 		@media $smPlus
 			width 654px
+		
+		@media $lg
+			width 500px
+		
+		@media $xlPlus
+			width 654px
 	
 	&_leavesImg
 		position absolute
@@ -129,6 +143,16 @@
 		width 179px
 		
 		@media $smPlus
+			top 57px
+			right -112px
+			width 320px
+		
+		@media $lg
+			top 40px
+			right -80px
+			width 220px
+		
+		@media $xlPlus
 			top 57px
 			right -112px
 			width 320px
