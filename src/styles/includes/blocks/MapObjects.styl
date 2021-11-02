@@ -1,0 +1,28 @@
+.MapObjects
+	position relative
+	padding 23px 22px
+	background $white
+	box-shadow 0 4px 52px rgba(0, 0, 0, 0.08)
+	
+	@media $smPlus
+		box-shadow 0 4px 52px rgba(0, 0, 0, 0.08)
+	
+	@media $lgPlus
+		padding-right 40px
+		padding-left 40px
+	
+	&_list
+		// position relative
+		list-style none
+		display flex
+		align-items flex-start
+		gap 16px
+		// overflow hidden
+		// overflow scroll
+		
+		@media $smPlus
+			justify-content space-between
+			gap 17px
+		
+		// @media $lgPlus
+		// 	justify-content center

@@ -39,3 +39,99 @@ block content
 			.TextBlock.TextBlock-location.About_textBlock.About_textBlock-location
 				h2.SectionTitle.TextBlock_title Расположение
 				.Text.TextBlock_text В пешей доступности - детские сады, школы, высшие учебные заведения, ФОК «Кузбасс», плавательный бассейн «Сибирь», множество магазинов в формате «у дома». Гипермаркеты «Лента», «Леруа Мерлен» и METRO – всего в нескольких минутах езды. #[br.hidden-xs]Транспортная доступность – общественный транспорт #[br]и объездные дороги
+	.MapSection
+		.MapSection_map#infrasMap
+		.Container.MapSection_container
+			.MapObjects.MapSection_objects
+				ul.MapObjects_list
+					li.MapObjects_item
+						.MapObject
+							.MapObject_number 42
+							h4.MapObject_title Все
+					li.MapObjects_item
+						.MapObject
+							.MapObject_number 4
+							h4.MapObject_title Парки и отдых
+					li.MapObjects_item
+						.MapObject
+							.MapObject_number 5
+							h4.MapObject_title Культура
+					li.MapObjects_item
+						.MapObject
+							.MapObject_number 23
+							h4.MapObject_title ТЦ и супермаркеты
+					li.MapObjects_item
+						.MapObject
+							.MapObject_number 9
+							h4.MapObject_title Развлечения
+					li.MapObjects_item
+						.MapObject
+							.MapObject_number 12
+							h4.MapObject_title Здоровье
+					li.MapObjects_item
+						.MapObject
+							.MapObject_number 3
+							h4.MapObject_title Спорт
+					li.MapObjects_item
+						.MapObject
+							.MapObject_number 8
+							h4.MapObject_title Образование
+	script(src="/js/jquery-3.6.0.min.js")
+	script(type="application/json" id="infrasObj").
+		[{
+		"coords": {
+		"lat": 54.9810530, "lng": 82.877835
+		},
+		"type": 1,
+		"ico": "/img/map_icons/health.svg"
+		},
+		{
+		"coords": {
+		"lat": 54.9801530, "lng": 82.879835
+		},
+		"type": 2,
+		"ico": "/img/map_icons/education.svg"
+		},
+		{
+		"coords": {
+		"lat": 54.9811530, "lng": 82.879835
+		},
+		"type": 3,
+		"ico": "/img/map_icons/food.svg"
+		},
+		{
+		"coords": {
+		"lat": 54.9791530, "lng": 82.880835
+		},
+		"type": 4,
+		"ico": "/img/map_icons/sport.svg"
+		},
+		{
+		"coords": {
+		"lat": 54.9779530, "lng": 82.870835
+		},
+		"type": 5,
+		"ico": "/img/map_icons/shop.svg"
+		},
+		{
+		"coords": {
+		"lat": 54.9780530, "lng": 82.875835
+		},
+		"type": 6,
+		"ico": "/img/map_icons/park.svg"
+		},
+		{
+		"coords": {
+		"lat": 54.9790530, "lng": 82.875035
+		},
+		"type": 7,
+		"ico": "/img/map_icons/water.svg"
+		},
+		{
+		"coords": {
+		"lat": 54.9799530, "lng": 82.874035
+		},
+		"type": 8,
+		"ico": "/img/map_icons/mall.svg"
+		}]
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW93iAmXx_qNSJ-PYhm8MJTA7XZE953V8")

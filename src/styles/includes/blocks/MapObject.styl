@@ -1,0 +1,33 @@
+.MapObject
+	text-align center
+	cursor pointer
+	
+	&_number
+		display inline-flex
+		justify-content center
+		align-items center
+		width 32px
+		height 32px
+		margin-bottom 7px
+		border 1px solid $brown
+		border-radius 50%
+		font-weight 500
+		font-size 16px
+		line-height 24px
+		
+		@media $lgPlus
+			margin-bottom 12px
+	
+	&_title
+		font-weight 500
+		font-size 12px
+		line-height 26px
+		opacity 0.6
+		white-space nowrap
+		
+		@media $lgPlus
+			font-size 16px
+	
+	&-selected
+		.MapObject_title
+			opacity 1
