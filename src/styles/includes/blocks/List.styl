@@ -1,0 +1,31 @@
+.List
+	list-style none
+	color $white
+	font-size 16px
+	line-height 28px
+	letter-spacing 0.02em
+	
+	@media $smPlus
+		font-size 18px
+		line-height 34px
+	
+	&_item
+		position relative
+		padding-left 24px
+		
+		@media $smPlus
+			padding-left 27px
+		
+		&::before
+			content ""
+			position absolute
+			top 13px
+			left 11px
+			width 2px
+			height 2px
+			border-radius 50%
+			background $white
+			
+			@media $smPlus
+				top 17px
+				left 13px

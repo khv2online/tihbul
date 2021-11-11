@@ -49,7 +49,7 @@
   },
   "optionalDependencies": {
     "bootstrap": "5.0.1",
-    "swiper": "^6.6.2"
+    "swiper": "^7.0.8"
   },
   "jshintConfig": {
     "maxerr": 99,

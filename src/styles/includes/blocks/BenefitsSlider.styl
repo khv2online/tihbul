@@ -1,0 +1,49 @@
+.BenefitsSlider
+	&_prev,
+	&_next
+		position absolute
+		z-index 1000
+		top 509px
+		
+		@media $smPlus
+			top 560px
+		
+		@media $lgPlus
+			top 752px
+	
+	&_prev
+		left 16px
+		
+		@media $smPlus
+			left 32px
+		
+		@media $lgPlus
+			right 99px
+			left auto
+	
+	&_next
+		right 16px
+		
+		@media $smPlus
+			right auto
+			left 132px
+		
+		@media $lgPlus
+			right 0
+			left auto
+
+	&_pagination
+		position absolute
+		z-index 1000
+		top 517px
+		right 92px
+		left 92px
+		
+		@media $smPlus
+			top 600px
+			right 46px
+			left auto
+		
+		@media $lgPlus
+			top 775px
+			right 513px

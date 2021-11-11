@@ -1,0 +1,27 @@
+.PaymentConditions
+	list-style none
+	display grid
+	grid-template-columns 1fr 1fr 1fr
+	align-items end
+	gap 9px
+	
+	@media $smPlus
+		grid-template-columns auto auto auto
+		justify-content space-between
+	
+	&_label
+		font-size 12px
+		line-height 15px
+		
+		@media $smPlus
+			font-size 14px
+			line-height 17px
+	
+	&_value
+		font-weight 500
+		font-size 14px
+		line-height 30px
+		
+		@media $smPlus
+			font-size 24px
+			line-height 1

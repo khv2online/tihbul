@@ -1,0 +1,45 @@
+.Tabs
+  &_list
+    display flex
+    align-items center
+    gap 16px
+    white-space nowrap
+    padding-right 16px
+    padding-left 16px
+    list-style none
+    overflow auto
+    
+    @media $smPlus
+      gap 14px
+      padding-right 0
+      padding-left 0
+    
+    @media $lgPlus
+      gap 17px
+    
+    &::-webkit-scrollbar
+      display none
+  
+  &_item
+    padding 9px 24px
+    border 1px solid $pastel
+    border-radius 40px
+    font-weight 500
+    font-size 16px
+    line-height 1.25
+    color $white
+    white-space nowrap
+    cursor pointer
+    @extend .transition
+    
+    @media $lgPlus
+      padding-right 23px
+      padding-left 23px
+    
+    &-active,
+    &:hover
+      background $pastel
+  
+  &_content
+    display none
+    position relative

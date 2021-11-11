@@ -1,0 +1,35 @@
+.FurnishImgWrapper
+	position relative
+	display grid
+	justify-content end
+	
+	&_img
+		max-width none
+		max-height 300px
+		margin-right -230px
+		
+		@media $smPlus
+			max-height 383px
+			margin-right -72px
+		
+		@media $lgPlus
+			max-height none
+			margin-right -300px
+	
+	&_btnPlus
+		position absolute
+		z-index 10
+		
+		&-first
+			top -23px
+			// left 16px
+			right 224px
+		
+		&-second
+			top 102px
+			right 75px
+		
+		&-third
+			top 150px
+			// left 20px
+			right 5px

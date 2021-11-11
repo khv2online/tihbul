@@ -1,0 +1,18 @@
+.Tooltip
+	&::after
+		content attr(data-text)
+		position absolute
+		top 0
+		left 0
+		padding 7px 22px 7px 23px
+		background $white
+		font-size 18px
+		line-height 34px
+		color $black
+		letter-spacing 0.02em
+		opacity 0
+		visibility hidden
+	
+	&-active::after
+		opacity 1
+		visibility visible

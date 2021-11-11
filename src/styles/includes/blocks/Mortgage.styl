@@ -1,0 +1,46 @@
+.Mortgage
+	padding 182px 0 79px
+	
+	@media $smPlus
+		padding 324px 0
+	
+	@media $lgPlus
+		padding 350px 0
+	
+	&_wrapper
+		@media $lgPlus
+			display grid
+			grid-template-columns 450px 1fr
+			grid-template-rows 1fr 1fr auto
+			gap 112px
+	
+	&_title
+		margin-bottom 24px
+		
+		@media $smPlus
+			margin-bottom 30px
+		
+		@media $lgPlus
+			margin-bottom 24px
+	
+	&_list
+		margin-bottom 32px
+		
+		@media $smPlus
+			margin-bottom 40px
+		
+		@media $lgPlus
+			margin-bottom 0
+	
+	&_interestRates
+		@media $sm
+			margin-right -4px
+		
+		@media $lgPlus
+			grid-area 1 / 2 / 4 / 3
+	
+	&_btnWrapper
+		@media $lgMinus
+			display flex
+			justify-content center
+			margin-top 40px

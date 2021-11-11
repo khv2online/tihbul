@@ -1,81 +1,310 @@
 extends layouts/base
 
 block content
-	.About
-		.Container.About_container
-			.About_advantagesWrapper
-				.TextBlock.About_textBlock
-					h2.SectionTitle.TextBlock_title О проекте
-					.Text.Text-larger
-						p ЖК «Тихий Бульвар» – это жилой комплекс класса «Комфорт», который расположился в новой развивающейся локации Ленинского района города Кемерово – на Верхнем Бульваре.
-				.Advantages.About_advantages
-					.Advantage.Advantages_item
-						.Advantage_iconWrapper
-							img(src="/img/advantages/brick.svg")
-						.Advantage_text Дом из полнотелого кирпича
-					.Advantage.Advantages_item
-						.Advantage_iconWrapper
-							img(src="/img/advantages/parking.svg")
-						.Advantage_text Удобный подземный паркинг
-					.Advantage.Advantages_item
-						.Advantage_iconWrapper
-							img(src="/img/advantages/public_space.svg")
-						.Advantage_text Современные общественные пространства
-					.Advantage.Advantages_item
-						.Advantage_iconWrapper
-							img(src="/img/advantages/furnish.svg")
-						.Advantage_text Качественная предчистовая отделка
-				.About_circleImgWrapper
-					img(src="/img/real_estate.webp" alt="Real estate").About_circleImg
-					img(src="/img/leaves.webp" alt="Leaves").About_leavesImg
-		.About_textAndImg
-			.TextBlock.About_textBlock.About_textBlock-fullWidthTablet
-				.Text.Text-centerMob.Text-larger Два дома переменной этажности #[br]с акцентными башнями и строгим фасадом отвечают всем современным требованиям, которые предъявляются #[br]к комфортному жилью.
-			.About_imgWrapper
-				img(src="/img/real_estate2_mob.webp" alt="Real estate").About_img.hidden-smPlus
-				img(src="/img/real_estate2_tablet.webp" alt="Real estate").About_img.hidden-xs.hidden-lgPlus
-				img(src="/img/real_estate2.webp" alt="Real estate").About_img.hidden-lgMinus
-		.Container.About_container
-			.TextBlock.TextBlock-location.About_textBlock.About_textBlock-location
-				h2.SectionTitle.TextBlock_title Расположение
-				.Text.TextBlock_text В пешей доступности - детские сады, школы, высшие учебные заведения, ФОК «Кузбасс», плавательный бассейн «Сибирь», множество магазинов в формате «у дома». Гипермаркеты «Лента», «Леруа Мерлен» и METRO – всего в нескольких минутах езды. #[br.hidden-xs]Транспортная доступность – общественный транспорт #[br]и объездные дороги
-	.MapSection
-		.MapSection_map#infrasMap
-		.Container.MapSection_container
-			.MapObjects.MapSection_objects
-				ul.MapObjects_list
-					li.MapObjects_item
-						.MapObject
-							.MapObject_number 42
-							h4.MapObject_title Все
-					li.MapObjects_item
-						.MapObject
-							.MapObject_number 4
-							h4.MapObject_title Парки и отдых
-					li.MapObjects_item
-						.MapObject
-							.MapObject_number 5
-							h4.MapObject_title Культура
-					li.MapObjects_item
-						.MapObject
-							.MapObject_number 23
-							h4.MapObject_title ТЦ и супермаркеты
-					li.MapObjects_item
-						.MapObject
-							.MapObject_number 9
-							h4.MapObject_title Развлечения
-					li.MapObjects_item
-						.MapObject
-							.MapObject_number 12
-							h4.MapObject_title Здоровье
-					li.MapObjects_item
-						.MapObject
-							.MapObject_number 3
-							h4.MapObject_title Спорт
-					li.MapObjects_item
-						.MapObject
-							.MapObject_number 8
-							h4.MapObject_title Образование
+	.HomePage
+		.About
+			.Container.About_container
+				.About_advantagesWrapper
+					.TextBlock.About_textBlock
+						h2.SectionTitle.TextBlock_title О проекте
+						.Text.Text-larger
+							p ЖК «Тихий Бульвар» – это жилой комплекс класса «Комфорт», который расположился в новой развивающейся локации Ленинского района города Кемерово – на Верхнем Бульваре.
+					.Advantages.About_advantages
+						.Advantage.Advantages_item
+							.Advantage_iconWrapper
+								img(src="/img/advantages/brick.svg")
+							.Advantage_text Дом из полнотелого кирпича
+						.Advantage.Advantages_item
+							.Advantage_iconWrapper
+								img(src="/img/advantages/parking.svg")
+							.Advantage_text Удобный подземный паркинг
+						.Advantage.Advantages_item
+							.Advantage_iconWrapper
+								img(src="/img/advantages/public_space.svg")
+							.Advantage_text Современные общественные пространства
+						.Advantage.Advantages_item
+							.Advantage_iconWrapper
+								img(src="/img/advantages/furnish.svg")
+							.Advantage_text Качественная предчистовая отделка
+					.About_circleImgWrapper
+						img(src="/img/real_estate.webp" alt="Real estate").About_circleImg
+						img(src="/img/leaves.webp" alt="Leaves").About_leavesImg
+			.About_textAndImg
+				.TextBlock.About_textBlock.About_textBlock-fullWidthTablet
+					.Text.Text-centerMob.Text-larger Два дома переменной этажности #[br]с акцентными башнями и строгим фасадом отвечают всем современным требованиям, которые предъявляются #[br]к комфортному жилью.
+				.About_imgWrapper
+					img(src="/img/real_estate2.webp" alt="Real estate").About_img
+			.Container.About_container
+				.TextBlock.TextBlock-location.About_textBlock.About_textBlock-location
+					h2.SectionTitle.TextBlock_title Расположение
+					.Text.TextBlock_text В пешей доступности - детские сады, школы, высшие учебные заведения, ФОК «Кузбасс», плавательный бассейн «Сибирь», множество магазинов в формате «у дома». Гипермаркеты «Лента», «Леруа Мерлен» и METRO – всего в нескольких минутах езды. #[br.hidden-xs]Транспортная доступность – общественный транспорт #[br]и объездные дороги
+		.MapSection
+			.MapSection_map#infrasMap
+			.Container.MapSection_container
+				.MapObjects.MapSection_objects
+					ul.MapObjects_list
+						li.MapObjects_item
+							.MapObject
+								.MapObject_number 42
+								h4.MapObject_title Все
+						li.MapObjects_item
+							.MapObject
+								.MapObject_number 4
+								h4.MapObject_title Парки и отдых
+						li.MapObjects_item
+							.MapObject
+								.MapObject_number 5
+								h4.MapObject_title Культура
+						li.MapObjects_item
+							.MapObject
+								.MapObject_number 23
+								h4.MapObject_title ТЦ и супермаркеты
+						li.MapObjects_item
+							.MapObject
+								.MapObject_number 9
+								h4.MapObject_title Развлечения
+						li.MapObjects_item
+							.MapObject
+								.MapObject_number 12
+								h4.MapObject_title Здоровье
+						li.MapObjects_item
+							.MapObject
+								.MapObject_number 3
+								h4.MapObject_title Спорт
+						li.MapObjects_item
+							.MapObject
+								.MapObject_number 8
+								h4.MapObject_title Образование
+		.BenefitsSection
+			.Container
+				.BenefitsSlider.BenefitsSection_swiper.swiper
+					.swiper-wrapper
+						.BenefitsSlider_slide.swiper-slide
+							.Benefit
+								.Benefit_label Жить в ЖК #[br.hidden-smPlus]«Тихий Бульвар» это —
+								h2.SectionTitle.SectionTitle-benefit.Benefit_title Жить в центре #[br.hidden-xs]событий
+								.Benefit_imgWrapper
+									img(src="/img/benefit.webp").Benefit_img
+								.Benefit_text
+									p Бульвар Строителей – самая длинная пешеходная аллея города, расположившаяся в центре Ленинского района города Кемерово. Высокая транспортная доступность и развитая инфраструктура делает это район привлекательным. Верхний Бульвар станет его логическим продолжением.
+						.BenefitsSlider_slide.swiper-slide
+							.Benefit
+								.Benefit_label Жить в ЖК #[br.hidden-smPlus]«Тихий Бульвар» это —
+								h2.SectionTitle.SectionTitle-benefit.Benefit_title Жить в центре #[br.hidden-xs]событий
+								.Benefit_imgWrapper
+									img(src="/img/benefit.webp").Benefit_img
+								.Benefit_text
+									p Бульвар Строителей – самая длинная пешеходная аллея города, расположившаяся в центре Ленинского района города Кемерово. Высокая транспортная доступность и развитая инфраструктура делает это район привлекательным. Верхний Бульвар станет его логическим продолжением.
+						.BenefitsSlider_slide.swiper-slide
+							.Benefit
+								.Benefit_label Жить в ЖК #[br.hidden-smPlus]«Тихий Бульвар» это —
+								h2.SectionTitle.SectionTitle-benefit.Benefit_title Жить в центре #[br.hidden-xs]событий
+								.Benefit_imgWrapper
+									img(src="/img/benefit.webp").Benefit_img
+								.Benefit_text
+									p Бульвар Строителей – самая длинная пешеходная аллея города, расположившаяся в центре Ленинского района города Кемерово. Высокая транспортная доступность и развитая инфраструктура делает это район привлекательным. Верхний Бульвар станет его логическим продолжением.
+						.BenefitsSlider_slide.swiper-slide
+							.Benefit
+								.Benefit_label Жить в ЖК #[br.hidden-smPlus]«Тихий Бульвар» это —
+								h2.SectionTitle.SectionTitle-benefit.Benefit_title Жить в центре #[br.hidden-xs]событий
+								.Benefit_imgWrapper
+									img(src="/img/benefit.webp").Benefit_img
+								.Benefit_text
+									p Бульвар Строителей – самая длинная пешеходная аллея города, расположившаяся в центре Ленинского района города Кемерово. Высокая транспортная доступность и развитая инфраструктура делает это район привлекательным. Верхний Бульвар станет его логическим продолжением.
+					button(type="button").SwiperBtn.SwiperBtn-prev.SwiperControls_prevBtn.BenefitsSlider_prev
+					.SwiperPagination.SwiperControls_pagination.BenefitsSlider_pagination
+					button(type="button").SwiperBtn.SwiperBtn-next.SwiperControls_nextBtn.BenefitsSlider_next
+		.Layouts
+			.Container.Layouts_container
+				.Layouts_wrapper.Tabs
+					.Layouts_header
+						.Layouts_label Планировки
+						ul.Tabs_list.Layouts_tabsList
+							li.Tabs_item.Tabs_item-active(data-index="0") 1-комнатные
+							li.Tabs_item(data-index="1") 2-комнатные
+							li.Tabs_item(data-index="2") 3-комнатные
+							li.Tabs_item(data-index="3") 4-комнатные
+						h2.SectionTitle.Layouts_title Выбирай по душе
+					.Layouts_content.Tabs_container
+						- for (var i = 0; i < 4; i++)
+							if i == 0
+								- var style = 'display: block;';
+							else
+								- var style = '';
+							.Tabs_content(style=style)
+								.LayoutSlider(
+									id='LayoutSlider' + i
+								)
+									.swiper.LayoutSlider_swiper
+										.swiper-wrapper
+											- for(var j = 0; j < 4; j++) {
+												.swiper-slide.LayoutSlider_slide
+													.Layout
+														.Layout_imgWrapper
+															img(src="/img/layout.webp").Layout_img
+														h4.Layout_title!= i+1 + '-комнатная <br>тип 24'
+														.Layout_square 32,5 — 33,6 м²
+														.Layout_price от 4 700 000 ₽
+														a(href="#").BtnDefault.BtnDefault-layout.Layout_btn Отправить заявку
+											- }
+										.SwiperControls.LayoutSlider_controls.hidden-smPlus
+											button(type="button").SwiperBtn.SwiperBtn-prev.SwiperControls_prevBtn.LayoutSlider_prev
+											.SwiperPagination.SwiperControls_pagination.LayoutSlider_pagination
+											button(type="button").SwiperBtn.SwiperBtn-next.SwiperControls_nextBtn.LayoutSlider_next
+										.LayoutSlider_btnWrapper
+											a(href="#").BtnSandy.BtnSandy-layoutsSlider.LayoutSlider_btn Посмотреть все планировки
+				.Furnish
+					.Furnish_textWrapper
+						.Furnish_label Отделка
+						h2.SectionTitle.Furnish_title White box
+						.Text.Furnish_text
+							p Квартиры в жилом комплексе «Тихий бульвар» сдаются с качественной предчистовой отделкой. Такое решение позволяет счастливым новоселам без предварительной подготовки приступить к самой творческой и интересной части ремонта.
+							p Стены в квартирах выровнены, выполнена стяжка пола со звукоизоляцией, возведены межкомнатные перегородки, установлены пятикамерные стеклопакеты и качественные стальные двери с отделкой из МДФ.
+					.Furnish_imgWrapper.FurnishImgWrapper
+						img(src="/img/furnish_img.svg").FurnishImgWrapper_img
+						a(href="#" data-text="Все стены оштукатурены").BtnPlus.FurnishImgWrapper_btnPlus.FurnishImgWrapper_btnPlus-first.Tooltip
+						a(href="#" data-text="Lorem").BtnPlus.FurnishImgWrapper_btnPlus.FurnishImgWrapper_btnPlus-second.Tooltip
+						a(href="#" data-text="Lorem3").BtnPlus.FurnishImgWrapper_btnPlus.FurnishImgWrapper_btnPlus-third.Tooltip
+		.Mortgage.HomePage_mortgage
+			.Container
+				.Mortgage_wrapper
+					h2.SectionTitle.Mortgage_title Выгодная #[br.hidden-smPlus]ипотека
+					ul.List.Mortgage_list
+						li.List_item Ведущие банки-партнеры
+						li.List_item Индивидуальные &nbsp;условия кредитования
+						li.List_item Персональный менеджер по ипотеке
+						li.List_item Помощь в сборе документов
+						li.List_item Бесплатная консультация юриста
+					.InterestRates.Mortgage_interestRates
+						.InterestRate.InterestRates_item
+							.InterestRate_logoWrapper
+								img(src="/img/sber_logo.svg" alt="Сбер Банк").InterestRate_logo
+							.InterestRate_bankName.hidden-xs Сбербанк России ПАО
+							ul.PaymentConditions.InterestRate_paymentConditions
+								li.PaymentConditions_item
+									.PaymentConditions_label Ежемесячный платёж
+									.PaymentConditions_value 24 363 ₽
+								li.PaymentConditions_item
+									.PaymentConditions_label Ставка
+									.PaymentConditions_value 9,3%
+								li.PaymentConditions_item
+									.PaymentConditions_label Срок
+									.PaymentConditions_value до 30 лет
+						.InterestRate.InterestRates_item
+							.InterestRate_logoWrapper
+								img(src="/img/vtb_logo.svg" alt="ВТБ").InterestRate_logo
+							.InterestRate_bankName.hidden-xs ВТБ (ПАО)
+							ul.PaymentConditions.InterestRate_paymentConditions
+								li.PaymentConditions_item
+									.PaymentConditions_label Ежемесячный платёж
+									.PaymentConditions_value 24 210 ₽
+								li.PaymentConditions_item
+									.PaymentConditions_label Ставка
+									.PaymentConditions_value 9,1%
+								li.PaymentConditions_item
+									.PaymentConditions_label Срок
+									.PaymentConditions_value до 30 лет
+						.InterestRate.InterestRates_item
+							.InterestRate_logoWrapper
+								img(src="/img/uralsib_logo.svg" alt="УралСиб").InterestRate_logo
+							.InterestRate_bankName.hidden-xs Банк Уралсиб ОАО
+							ul.PaymentConditions.InterestRate_paymentConditions
+								li.PaymentConditions_item
+									.PaymentConditions_label Ежемесячный платёж
+									.PaymentConditions_value 24 126 ₽
+								li.PaymentConditions_item
+									.PaymentConditions_label Ставка
+									.PaymentConditions_value 8,99%
+								li.PaymentConditions_item
+									.PaymentConditions_label Срок
+									.PaymentConditions_value до 30 лет
+						.InterestRate.InterestRates_item.hidden-xs
+							.InterestRate_logoWrapper
+								img(src="/img/alpha_bank_logo.svg" alt="УралСиб").InterestRate_logo
+							.InterestRate_bankName.hidden-xs АО «АЛЬФА-БАНК»
+							ul.PaymentConditions.InterestRate_paymentConditions
+								li.PaymentConditions_item
+									.PaymentConditions_label Ежемесячный платёж
+									.PaymentConditions_value 23 747 ₽
+								li.PaymentConditions_item
+									.PaymentConditions_label Ставка
+									.PaymentConditions_value 8,49%
+								li.PaymentConditions_item
+									.PaymentConditions_label Срок
+									.PaymentConditions_value до 30 лет
+					.Mortgage_btnWrapper
+						a(href="#").BtnDefault.BtnDefault-mortgage.Mortgage_btn Подать заявку
+		.Reputation
+			.Container
+				.Reputation_label О застройщике
+				h2.SectionTitle.Reputation_title Компания #[br.hidden-smPlus]с отличной репутацией
+				.Text.Reputation_text
+					p ЖК «Тихий Бульвар» - это жилой комплекс класса «Комфорт», который расположился в новой развивающейся локации Ленинского района города Кемерово – на Верхнем Бульваре.
+				.Reputation_imgWrapper
+					img(src="/img/reputation_img.webp").Reputation_img
+					img(src="/img/sks_logo.svg").Reputation_logo
+		.Gallery
+			.Container
+				h2.SectionTitle.Gallery_title Ход строительства
+				.Dropdowns.Gallery_dropdowns
+					select.Select(name="month").Dropdowns_item
+						option(value="january") Январь
+						option(value="february") Февраль
+						option(value="march") Март
+						option(value="april") Апрель
+						option(value="mai") Май
+						option(value="june") Июнь
+						option(value="july") Июль
+						option(value="august") Август
+						option(value="september") Сентябрь
+						option(value="october" selected) Октябрь
+						option(value="november") Ноябрь
+						option(value="december") Декабрь
+					select.Select(name="year").Dropdowns_item
+						option(value="2021") 2021
+						option(value="2020") 2020
+						option(value="2019") 2019
+						option(value="2018") 2018
+						option(value="2017") 2017
+						option(value="2016") 2016
+						option(value="2015") 2015
+			.GallerySlider.swiper.Gallery_slider
+				.swiper-wrapper.GallerySlider_wrapper
+					.GallerySlider_slide.swiper-slide
+						.GallerySlider_imgWrapper
+							img(src="/img/gallery_img1.webp").GallerySlider_img
+					.GallerySlider_slide.swiper-slide
+						.GallerySlider_imgWrapper
+							img(src="/img/gallery_img2.webp").GallerySlider_img
+					.GallerySlider_slide.swiper-slide
+						.GallerySlider_imgWrapper
+							img(src="/img/gallery_img3.webp").GallerySlider_img
+					.GallerySlider_slide.swiper-slide
+						.GallerySlider_imgWrapper
+							img(src="/img/gallery_img3.webp").GallerySlider_img
+				.SwiperControls.GallerySlider_controls.hidden-smPlus
+					button(type="button").SwiperBtn.SwiperBtn-prev.SwiperControls_prevBtn.GallerySlider_prev
+					.SwiperPagination.SwiperControls_pagination.GallerySlider_pagination
+					button(type="button").SwiperBtn.SwiperBtn-next.SwiperControls_nextBtn.GallerySlider_next
+		.ApartmentBooking.HomePage_apartmentBooking
+			.Container
+				h2.SectionTitle.ApartmentBooking_title Забронируйте первыми #[br]свою квартиру
+				.Text.ApartmentBooking_text Менеджер свяжется с вами #[br.hidden-smPlus]и подберет подходящий вариант и условия покупки.
+				form.Form.ApartmentBooking_form(action="#")
+					.Form_items
+						.Form_item
+							input(type="text" placeholder="Ваше имя*" required).FormText
+						.Form_item
+							input(type="tel" placeholder="Ваш телефон*" required).FormText
+					.Form_actions
+						button(type="submit").BtnDefault.Form_submitBtn Отправить заявку
+					.Form_agreement
+						.Checkbox
+							input(type="checkbox" name="user_agreement" value="yes" id="user_agreement").Checkbox_input
+							label(for="user_agreement").Checkbox_label Я согласен с условиями обработки персональных данных
+				.OvalImg.ApartmentBooking_imgWrapper
+					img(src="/img/apartment_booking_img.webp").OvalImg_img.ApartmentBooking_img
+
 	script(src="/js/jquery-3.6.0.min.js")
 	script(type="application/json" id="infrasObj").
 		[{

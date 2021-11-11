@@ -1,3 +1,9 @@
+import Swiper, {
+  Navigation,
+  Pagination,
+  EffectFade
+} from 'swiper';
+
 import PerfectScrollbar from 'perfect-scrollbar';
 
 const mapObjectsPs = new PerfectScrollbar('.MapObjects', {
@@ -28,11 +34,162 @@ menuHamburger.addEventListener('click', function (e) {
   e.preventDefault();
 });
 
+
 closeMobileNavigation.addEventListener('click', function (e) {
   menuHamburger.classList.remove('MenuHamburger-active');
   mobileNavigation.classList.remove('MobileNavigation-opened');
   document.body.style.overflow = '';
   e.preventDefault();
+});
+
+const benefitsSlider = new Swiper('.BenefitsSlider', {
+  modules: [Navigation, Pagination],
+
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  slideActiveClass: 'BenefitsSlider_slide-active',
+
+  pagination: {
+    el: '.BenefitsSlider_pagination',
+    clickable: true,
+    bulletClass: 'SwiperPagination_bullet',
+    bulletActiveClass: 'SwiperPagination_bullet-active',
+  },
+
+  navigation: {
+    prevEl: '.BenefitsSlider_prev',
+    nextEl: '.BenefitsSlider_next',
+    disabledClass: 'SwiperBtn-disabled'
+  },
+
+  breakpoints: {
+    1024: {
+      spaceBetween: 48,
+    },
+  },
+});
+
+const layoutsSlider = [];
+document.querySelectorAll(".LayoutSlider").forEach(function (item) {
+  "use strict";
+  layoutsSlider.push(
+    new Swiper(`#${item.id} .swiper`, {
+      modules: [Navigation, Pagination],
+
+      a11y: {
+        enabled: false,
+      },
+
+      slidesPerView: 1,
+      spaceBetween: 16,
+
+      pagination: {
+        el: `#${item.id} .SwiperPagination`,
+        bulletClass: "SwiperPagination_bullet",
+        bulletActiveClass: "SwiperPagination_bullet-active",
+        clickable: true,
+      },
+
+      navigation: {
+        prevEl: `#${item.id} .LayoutSlider_prev`,
+        nextEl: `#${item.id} .LayoutSlider_next`,
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 24,
+        },
+        1366: {
+          slidesPerView: 2
+        },
+      },
+    })
+  );
+});
+
+document.querySelectorAll(".Tabs_list").forEach(function (tabList) {
+  "use strict";
+  tabList.querySelectorAll(".Tabs_item").forEach(function (tab, tabIndex) {
+    tab.onclick = () => {
+      const activeTab = tab.parentNode.querySelector(".Tabs_item-active");
+
+      if (activeTab) {
+        activeTab.classList.remove("Tabs_item-active");
+      }
+
+      tab.classList.add("Tabs_item-active");
+
+      const parent = tab.closest(".Tabs");
+      const tabsContent = parent.querySelectorAll(".Tabs_content");
+
+      tabsContent.forEach((tabContent) => {
+        tabContent.style.display = "none";
+      });
+
+      tabsContent[tabIndex].style.display = "block";
+
+      const layoutSlider = tabsContent[tabIndex].querySelector(
+        ".LayoutSlider"
+        );
+      if (layoutSlider) {
+        layoutsSlider[tabIndex].update();
+      }
+
+      const gallerySlider = tabsContent[tabIndex].querySelector(".GallerySlider");
+      if (gallerySlider) {
+        gallerySliders[tabIndex].update();
+      }
+    };
+  });
+});
+
+document.addEventListener('click', function (e) {
+  let tooltip = e.target.closest('.Tooltip');
+
+  if (!tooltip) return;
+
+  tooltip.classList.toggle('Tooltip-active');
+  event.preventDefault();
+});
+
+document.addEventListener('click', function (e) {
+  let tooltipActive = document.querySelector('.Tooltip-active');
+
+  if (tooltipActive && tooltipActive.contains(e.target)) {
+    tooltipActive.classList.remove('Tooltip-active');
+  };
+  
+});
+
+
+new Swiper(`.GallerySlider`, {
+  modules: [Navigation, Pagination],
+
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+
+  pagination: {
+    el: `.GallerySlider_pagination`,
+    bulletClass: "SwiperPagination_bullet",
+    bulletActiveClass: "SwiperPagination_bullet-active",
+    clickable: true,
+  },
+
+  navigation: {
+    prevEl: `.GallerySlider_prev`,
+    nextEl: `.GallerySlider_next`,
+  },
+
+  // breakpoints: {
+  //   768: {
+  //     slidesPerView: "auto",
+  //     spaceBetween: 24,
+  //   },
+  //   1366: {
+  //     slidesPerView: 2
+  //   },
+  // },
 });
 
 (() => {
@@ -116,13 +273,13 @@ closeMobileNavigation.addEventListener('click', function (e) {
   });
 })();
 
-document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-  "use strict";
+// document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+//   "use strict";
 
-  anchor.addEventListener("click", function (event) {
-    event.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
+//   anchor.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     document.querySelector(this.getAttribute("href")).scrollIntoView({
+//       behavior: "smooth",
+//     });
+//   });
+// });

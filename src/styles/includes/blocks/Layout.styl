@@ -1,0 +1,61 @@
+.Layout
+	padding 33px 24px 31px
+	background $white
+	box-shadow 0 15px 40px rgba(0, 36, 77, 0.1)
+	border-radius 6px
+	
+	@media $smPlus
+		display grid
+		grid-template-columns 1fr auto
+		grid-template-rows auto 1fr 1fr auto
+		width 648px
+		padding 56px 41px 23px
+	
+	&_imgWrapper
+		margin-bottom 25px
+		text-align center
+		
+		@media $smPlus
+			grid-area 1 / 2 / 5 / 3
+			margin-right 23px
+	
+	&_img
+		width 144px
+		
+		@media $smPlus
+			width auto
+	
+	&_title
+		margin-bottom 11px
+		font-weight normal
+		font-family $forum
+		font-size 34px
+		line-height 38px
+		color $brown
+		
+		@media $smPlus
+			margin-top 15px
+			font-size 48px
+			line-height 53px
+	
+	&_square
+		margin-bottom 8px
+		color #909599
+		font-size 16px
+		line-height 1.25
+		
+		@media $smPlus
+			align-self end
+	
+	&_price
+		margin-bottom 23px
+		font-size 24px
+		line-height 1
+	
+	&_btn
+		@media $xs
+			width 100%
+		
+		@media $smPlus
+			justify-self start
+			margin-bottom 46px
