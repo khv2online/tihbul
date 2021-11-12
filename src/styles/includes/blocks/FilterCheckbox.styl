@@ -1,0 +1,25 @@
+.FilterCheckbox
+	&_input
+		position absolute
+		clip rect(0, 0, 0, 0)
+		
+		&:checked ~ .FilterCheckbox_label
+			background $pastel
+			color $white
+	
+	&_label
+		display grid
+		justify-content center
+		align-items center
+		height 40px
+		font-weight 500
+		font-size 16px
+		line-height 20px
+		letter-spacing 0.02em
+		cursor pointer
+		@extend .transition
+		
+	&:hover
+		.FilterCheckbox_label
+			background $pastel
+			color $white

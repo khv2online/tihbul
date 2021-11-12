@@ -1,6 +1,27 @@
 .SocIcons
-	display grid
-	grid-template-columns repeat(auto-fit, minmax(32px, auto))
-	justify-content center
-	align-items center
-	gap 24px
+	&_list
+		display grid
+		grid-template-columns repeat(auto-fit, minmax(32px, auto))
+		justify-content center
+		align-items center
+		gap 24px
+		list-style none
+	
+	&-apartmentTabsSection
+		@media $lgPlus
+			display grid
+			grid-template-columns auto 1fr
+			align-items center
+			
+			.SocIcons_title
+				font-weight normal
+				font-size 16px
+				line-height 24px
+				color rgba($white, .6)
+				
+		.SocIcons_list
+			gap 8px
+			justify-content end
+			
+			@media $smPlus
+				gap 24px

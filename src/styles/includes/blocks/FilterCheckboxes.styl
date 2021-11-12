@@ -1,0 +1,17 @@
+.FilterCheckboxes
+	display grid
+	grid-template-columns repeat(auto-fit, minmax(70px, 1fr))
+	
+	&_item
+		.FilterCheckbox_label
+			border 1px solid $pastel
+			border-left none
+		
+		&:first-child
+			.FilterCheckbox_label
+				border-left 1px solid $pastel
+				border-radius 40px 0 0 40px
+		
+		&:last-child
+			.FilterCheckbox_label
+				border-radius 0 40px 40px 0

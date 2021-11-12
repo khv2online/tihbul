@@ -1,32 +1,95 @@
 .Reputation
 	padding 0 0 50px
 	
+	@media $smPlus
+		padding-bottom 69px
+	
+	@media $lgPlus
+		display grid
+		grid-template-columns auto 839px
+		align-items center
+		padding-bottom 0
+	
+	&_textWrapper
+		padding-right 16px
+		padding-left 16px
+		
+		@media $smPlus
+			padding-right 32px
+			padding-left 32px
+		
+		@media $lgPlus
+			width 813px
+			max-width 100%
+			justify-self end
+			margin-top -180px
+	
 	&_label
 		margin-bottom 16px
 		font-size 18px
 		line-height 24px
 		letter-spacing 0.02em
 		color $white
+		
+		@media $smPlus
+			margin-bottom 28px
+			font-size 24px
+			line-height 34px
 	
 	&_title
-		margin-bottom 16px
+		margin-bottom 18px
+		
+		@media $smPlus
+			margin-bottom 41px
 	
 	&_text
-		margin-bottom 71px
+		margin-bottom 70px
+		
+		@media $smPlus
+			margin-bottom 140px
+		
+		@media $lgPlus
+			margin-bottom 0
+			padding-right 100px
 	
 	&_imgWrapper
 		position relative
 		display grid
 		justify-content center
-		margin-right -16px
-		margin-left -16px
+		filter drop-shadow(0px 15px 40px rgba(0, 36, 77, 0.1))
+		border-radius 6px
+		
+		@media $smPlus
+			margin-right -32px
+			margin-left -32px
+		
+		@media $lgPlus
+			// grid-area 1 / 2 / 4 / 3
+			margin-right 0
+			margin-left 0
+			padding-bottom 130px
+			overflow hidden
 	
 	&_img
 		grid-area 1 / 1 / 2 / 2
 		max-width none
 		max-height 400px
+		
+		@media $smPlus
+			max-height 664px
+			margin-left 111px
 	
 	&_logo
 		position absolute
 		top -81px
 		right 32px
+		
+		@media $smPlus
+			top -122px
+			right 91px
+			width 316px
+		
+		@media $lgPlus
+			top auto
+			right 299px
+			bottom 0

@@ -1,15 +1,29 @@
 .Contacts
 	list-style none
+	display flex
+	flex-direction column
+	gap 10px
 	color $white
 	font-size 14px
 	line-height 24px
 	letter-spacing 0.02em
 	
-	&_item
-		margin-bottom 10px
+	@media $smPlus
+		flex-direction row
+		justify-content center
+		align-items center
+		gap 24px
+		font-size 16px
+		line-height 34px
+	
+	@media $lgPlus
+		font-size 18px
+	
+	// &_item
+	// 	margin-bottom 10px
 		
-		&:last-child
-			margin-bottom 0
+	// 	&:last-child
+	// 		margin-bottom 0
 	
 	&_link
 		color $white

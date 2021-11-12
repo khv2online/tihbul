@@ -2,15 +2,52 @@
 	position relative
 	z-index 10
 	
+	@media $smPlus
+		display grid
+		grid-template-columns 1fr 282px
+		grid-template-rows auto auto 1fr
+		column-gap 20px
+		align-items start
+	
+	@media $lgPlus
+		grid-template-columns 1fr 466px
+	
+	&_wrapper
+		@media $smPlus
+			display grid
+			grid-template-columns 1fr 282px
+			grid-template-rows auto auto 1fr
+			column-gap 20px
+			align-items start
+		
+		@media $lgPlus
+			grid-template-columns 1fr 466px
+	
 	&_title
 		margin-bottom 17px
+		
+		@media $smPlus
+			margin-bottom 24px
+		
+		@media $lgPlus
+			margin-bottom 40px
 	
 	&_text
 		margin-bottom 31px
+		
+		@media $smPlus
+			grid-row 2 / 3
+		
+		@media $lgPlus
+			max-width 584px
+			margin-bottom 71px
 	
 	&_form
 		margin-right 8px
 		margin-bottom 40px
+		
+		@media $smPlus
+			grid-row 3 / 4
 	
 	&_imgWrapper
 		width 240px
@@ -20,7 +57,43 @@
 		border-radius 216px
 		overflow hidden
 		
+		@media $smPlus
+			grid-row 1 / 4
+			width 394px
+			height 728px
+			margin-right -111px
+		
+		@media $lgPlus
+			width 432px
+			height 799px
+			margin-top 10px
+			margin-right 33px
+		
 	&_img
 		max-width none
 		max-height 100%
 		margin-left -46px
+		
+		@media $smPlus
+			margin-left -74px
+		
+		@media $lgPlus
+			margin-left -80px
+	
+	&-greenWaveBg
+		padding 452px 0 100px
+		background url("data:image/svg+xml,%3Csvg width='320' height='1635' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-141.467 92.517c-37.103 28.279-66.31 66.333-75.833 107.968L-227 1635c11.007-29.08 43.003-96.58 82.932-133.89 49.913-46.65 87.126-45.76 84.814-10.45-2.312 35.3-13.723 66.26-15.539 74.69-1.815 8.43-15.928 63.8 33.96 40.14 49.889-23.66 212.605-158.62 324.209-187.15 89.284-22.82 172.601 16.12 203.098 38.45L498 75.58c-30.333-38.811-88.178-43.046-203.162 0-114.984 43.047-155.194 26.816-136.147-43.046 19.046-69.862-144.612 28.227-201.046 62.1-44.075 26.454-80.769 35.513-71.953 8.468 10.581-32.461-4.938-27.521-27.159-10.585Z' fill='%23476D5C'/%3E%3Cpath d='M-217 200.486c9.519-41.53 38.714-79.488 75.801-107.696 22.212-16.894 37.725-21.82 27.148 10.558-8.813 26.977 27.867 17.941 71.923-8.446 56.41-33.787 220-131.629 200.961-61.943-19.038 69.686 21.154 85.875 136.09 42.938 114.936-42.938 172.756-38.715 203.077 0' stroke='%23FCE7C7' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 0 0 / cover no-repeat
+		
+		@media $smPlus
+			display block
+			padding 507px 0 16px
+			background-image url("data:image/svg+xml,%3Csvg width='768' height='1651' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-374.5 247.534c-105.193 80.147-188 188-215 306L-617 1914.86c31.206-82.43 121.92-273.72 235.128-379.48 141.509-132.2 247.015-129.68 240.46-29.62-6.555 100.07-38.906 187.81-44.054 211.71-5.148 23.89-45.16 180.81 96.282 113.76 141.443-67.05 602.771-449.57 919.189-530.43 253.135-64.68 489.355 45.71 575.815 108.99l32.68-1210.256c-86-110-250-122-576 0s-440 76-386-122-410 80-570 176c-124.959 74.975-228.995 100.65-204 24 30-92-14-78-77-30Z' fill='%23476D5C'/%3E%3Cpath d='M-589.5 553.534c27-118 109.807-225.853 215-306 63-48 107-62 77 30-24.995 76.65 79.041 50.976 204-24 160-96 624-374 570-176s60 244 386 122 490-110 576 0' stroke='%23FCE7C7' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+		
+		@media $lgPlus
+			padding 667px 0 40px
+			background-image url("data:image/svg+xml,%3Csvg width='1920' height='1866' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M202 1576c-105.193 80.15-188 188-215 306L-40.5 642.325C-9.292 559.9 81.42 368.61 194.628 262.85c141.51-132.201 247.015-129.687 240.46-29.62-6.555 100.068-38.905 187.804-44.053 211.702-5.149 23.898-45.16 180.819 96.282 113.766 141.442-67.052 602.773-449.576 919.193-530.427 253.13-64.681 489.35 45.703 575.81 108.981L2015 1528c-86-110-250-122-576 0s-440 76-386-122-410 80-570 176c-124.959 74.98-228.995 100.65-204 24 30-92-14-78-77-30Z' fill='%23476D5C'/%3E%3Cpath d='M-13 1882c27-118 109.807-225.85 215-306 63-48 107-62 77 30-24.995 76.65 79.041 50.98 204-24 160-96 624-374 570-176s60 244 386 122 490-110 576 0M-40.5 642.325C-9.294 559.9 81.42 368.61 194.628 262.849c141.51-132.2 247.015-129.687 240.46-29.619-6.555 100.068-38.905 187.803-44.053 211.702-5.149 23.898-45.161 180.819 96.282 113.766C628.759 491.645 1090.09 109.122 1406.51 28.27c253.13-64.68 489.35 45.704 575.81 108.981' stroke='%23FCE7C7' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+
+	&-layoutsSelection,
+	&-layoutPage
+		.ApartmentBooking_imgWrapper
+			margin-bottom -344px

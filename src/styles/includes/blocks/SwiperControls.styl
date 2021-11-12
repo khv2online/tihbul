@@ -3,3 +3,15 @@
 	grid-template-columns 32px 1fr 32px
 	align-items center
 	gap 44px
+
+	@media $smPlus
+		grid-template-columns 61px 1fr 61px
+	
+	&-withoutPagination
+		grid-template-columns 32px 32px
+		
+		@media $smPlus
+			grid-template-columns 61px 61px
+		
+		@media $lgPlus
+			gap 40px

@@ -3,18 +3,43 @@
 	background $black
 	text-align center
 	
+	@media $smPlus
+		padding 132px 0 45px
+	
+	@media $lgPlus
+		padding 71px 0 45px
+	
 	&_top
 		padding-bottom 26px
+		
+		@media $smPlus
+			padding-bottom 36px
+		
+		@media $lgPlus
+			position relative
+			z-index 10
 	
 	&_logo
 		margin-bottom 33px
+		
+		@media $smPlus
+			margin-bottom 94px
+		
+		@media $lgPlus
+			margin-bottom 155px
 	
 	&_contacts
 		margin-bottom 30px
+		
+		@media $smPlus
+			margin-bottom 23px
 	
 	&_bottom
 		padding-top 16px
 		border-top 1px solid rgba(#FCF6F2, .2)
+		
+		@media $smPlus
+			padding-top 41px
 	
 	&_copyright
 		margin 0 -4px

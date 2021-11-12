@@ -1,0 +1,47 @@
+.Filter
+	padding 34px 16px 32px
+	background $white
+	
+	@media $smPlus
+		padding 41px 29px 38px
+		border-radius 6px
+	
+	@media $lgPlus
+		padding 41px 29px 38px
+	
+	&_items
+		display grid
+		grid-template-columns 100%
+		gap 34px
+		margin-bottom 35px
+		
+		@media $smPlus
+			grid-template-columns 1fr 1fr
+			gap 40px 24px
+			margin-bottom 55px
+		
+		@media $lgPlus
+			grid-template-columns 1fr 1fr 1fr 1fr
+			margin-bottom 40px
+		
+		&:last-child
+			margin-bottom 0
+	
+	&_resetLink
+		display grid
+		grid-template-columns 17px auto
+		justify-content center
+		align-items center
+		gap 11px
+		font-weight 500
+		font-size 14px
+		line-height 17px
+		letter-spacing 0.02em
+		color $pastel
+		text-decoration none
+		
+		&::before
+			content ""
+			width 17px
+			height 16px
+			background url("data:image/svg+xml,%3Csvg width='17' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23BD7B6E' d='M.283 15.034 15.264.054l.967.966L1.25 16z'/%3E%3Cpath fill='%23BD7B6E' d='m.966 0 14.98 14.98-.966.967L0 .967z'/%3E%3C/svg%3E") 0 0 no-repeat

@@ -1,0 +1,139 @@
+extends layouts/layout_base
+
+block content
+	.LayoutPage
+		.Container
+			.ApartmentTabsSection.LayoutPage_apartmentTabsSection
+				.ApartmentTabsSection_header
+					a(href="#").ApartmentTabsSection_link Назад #[span.hidden-xs к планировкам]
+					h2.SectionTitle.SectionTitle-apartmentTabsSection.ApartmentTabsSection_title.hidden-xs 1-комнатная квартира, 37.32 кв.м за 4,7 млн руб.
+					.SocIcons.SocIcons-apartmentTabsSection.ApartmentTabsSection_socIcons
+						h3.SocIcons_title.hidden-lgMinus Поделиться
+						ul.SocIcons_list
+							li.SocIcons_item
+								a(href="http://fb.com" target="_blank").SocIcon.SocIcon-fb.SocIcons_link
+							li.SocIcons_item
+								a(href="http://vk.com" target="_blank").SocIcon.SocIcon-vk.SocIcons_link
+							li.SocIcons_item
+								a(href="http://twitter.com" target="_blank").SocIcon.SocIcon-twitter.SocIcons_link
+							li.SocIcons_item
+								a(href="http://ok.ru" target="_blank").SocIcon.SocIcon-ok.SocIcons_link
+				.ApartmentTabs.ApartmentTabsSection_content
+					.ApartmentTabs_container
+						.ApartmentTabs_content(style="display: block;")
+							.Apartment
+								.Apartment_layout
+									img(src="/img/layout2.webp").Apartment_layoutImg
+								.Apartment_icons
+									img(src="/img/compass.svg").Apartment_icon.Apartment_icon-compass
+									img(src="/img/plan.svg").Apartment_icon.Apartment_icon-plan
+								.Characteristics.Apartment_characteristics
+									ul.Characteristics_list
+										li.Characteristics_item
+											.Characteristics_name Стоимость
+											.Characteristics_value 4 700 000 ₽
+										li.Characteristics_item
+											.Characteristics_name Стоимость, м#[sup 2]
+											.Characteristics_value 109 870 ₽
+										li.Characteristics_item
+											.Characteristics_name Площадь, м#[sup 2]
+											.Characteristics_value 37.32
+										li.Characteristics_item
+											.Characteristics_name Этаж
+											.Characteristics_value 7
+										li.Characteristics_item
+											.Characteristics_name Количество комнат
+											.Characteristics_value 1
+										li.Characteristics_item
+											.Characteristics_name Номер
+											.Characteristics_value 64
+								.Apartment_bookBtnWrapper
+									a(href="#").BtnDefault.BtnDefault-bookApartment.Apartment_bookBtn Забронировать квартиру
+								.Apartment_contacts
+									.Apartment_contactsText Или обратиться в отдел продаж по телефону
+									a(href="tel:+73842233373").Phone.Phone-apartment.Apartment_phone +7 (3842) 23-33-73
+						.ApartmentTabs_content
+						.ApartmentTabs_content
+						.ApartmentTabs_content
+						.ApartmentTabs_content
+						.ApartmentTabs_content
+					.ApartmentTabs_listWrapper
+						h4.ApartmentTabs_listTitle Варианты на других этажах
+						ul.ApartmentTabs_list
+							li.ApartmentTabs_item
+								.ApartmentTabs_floor 2 этаж
+								.ApartmentTabs_price 4 150 000 ₽
+							li.ApartmentTabs_item
+								.ApartmentTabs_floor 4 этаж
+								.ApartmentTabs_price 4 290 000 ₽
+							li.ApartmentTabs_item
+								.ApartmentTabs_floor 5 этаж
+								.ApartmentTabs_price 4 190 000 ₽
+							li.ApartmentTabs_item.ApartmentTabs_item-active
+								.ApartmentTabs_floor 7 этаж
+								.ApartmentTabs_price 4 790 000 ₽
+							li.ApartmentTabs_item
+								.ApartmentTabs_floor 9 этаж
+								.ApartmentTabs_price 4 840 000 ₽
+							li.ApartmentTabs_item
+								.ApartmentTabs_floor 10 этаж
+								.ApartmentTabs_price 3 990 000 ₽
+			.LayoutSlider.LayoutSlider-layoutPage.LayoutPage_slider#LayoutSlider
+				.LayoutSlider_label Похожие квартиры
+				.swiper.LayoutSlider_swiper
+					.swiper-wrapper
+						.swiper-slide.LayoutSlider_slide
+							.Layout.Layout-small.LayoutSlider_layout
+								.Layout_imgWrapper
+									img(src="/img/layout.webp").Layout_img
+								h4.Layout_title 1-комнатная
+								.Layout_square 33,6 м#[sup 2]
+								.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.swiper-slide.LayoutSlider_slide
+							.Layout.Layout-small.LayoutSlider_layout
+								.Layout_imgWrapper
+									img(src="/img/layout.webp").Layout_img
+								h4.Layout_title 1-комнатная
+								.Layout_square 33,6 м#[sup 2]
+								.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.swiper-slide.LayoutSlider_slide
+							.Layout.Layout-small.LayoutSlider_layout
+								.Layout_imgWrapper
+									img(src="/img/layout.webp").Layout_img
+								h4.Layout_title 1-комнатная
+								.Layout_square 33,6 м#[sup 2]
+								.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.swiper-slide.LayoutSlider_slide
+							.Layout.Layout-small.LayoutSlider_layout
+								.Layout_imgWrapper
+									img(src="/img/layout.webp").Layout_img
+								h4.Layout_title 1-комнатная
+								.Layout_square 33,6 м#[sup 2]
+								.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+					button(type="button").SwiperBtn.SwiperBtn-prev.prevBtn.LayoutSlider_prev.hidden-lgPlus
+					.SwiperPagination.pagination.LayoutSlider_pagination.hidden-lgPlus
+					button(type="button").SwiperBtn.SwiperBtn-next.nextBtn.LayoutSlider_next.hidden-lgPlus
+					.LayoutSlider_btnWrapper.hidden-smPlus.hidden
+						a(href="#").BtnSandy.BtnSandy-layoutsSlider.LayoutSlider_btn Посмотреть все планировки
+		.ApartmentBooking.ApartmentBooking-layoutPage.ApartmentBooking-greenWaveBg.LayoutPage_apartmentBooking
+			.Container
+				.ApartmentBooking_wrapper
+					h2.SectionTitle.SectionTitle-apartmentBooking.ApartmentBooking_title Забронируйте первыми #[br]свою квартиру
+					.Text.ApartmentBooking_text Менеджер свяжется с вами #[br.hidden-smPlus]и подберет подходящий вариант и условия покупки.
+					form.Form.Form-apartmentBooking.ApartmentBooking_form(action="#")
+						.Form_items
+							.Form_item
+								input(type="text" placeholder="Ваше имя*" required).FormText
+							.Form_item
+								input(type="tel" placeholder="Ваш телефон*" required).FormText
+						.Form_actions
+							button(type="submit").BtnDefault.Form_submitBtn Отправить заявку
+						.Form_agreement
+							.Checkbox
+								input(type="checkbox" name="user_agreement" value="yes" id="user_agreement").Checkbox_input
+								label(for="user_agreement").Checkbox_label Я согласен с условиями обработки персональных данных
+					.ApartmentBooking_imgWrapper
+						img(src="/img/apartment_booking_img.webp").ApartmentBooking_img
+
+block page_bottom
+	script(src="/js/layout.js")

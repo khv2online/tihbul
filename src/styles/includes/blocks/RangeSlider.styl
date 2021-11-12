@@ -1,0 +1,21 @@
+.RangeSlider
+  position relative
+  height 1px
+  background $black
+  
+  &_range
+    position absolute
+    height 100%
+    background $pastel
+  
+  &_handle
+    position absolute
+    top -11px
+    width 25px
+    height 25px
+    background url("data:image/svg+xml,%3Csvg width='25' height='25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m11.086 1.414-9.672 9.672a2 2 0 0 0 0 2.828l9.672 9.672a2 2 0 0 0 2.828 0l9.672-9.672a2 2 0 0 0 0-2.828l-9.672-9.672a2 2 0 0 0-2.828 0Z' fill='%23BD7B6E'/%3E%3Cpath fill='%23fff' d='M11 10h1v5h-1zM13 10h1v5h-1z'/%3E%3C/svg%3E") center center no-repeat
+    outline none
+    cursor pointer
+
+    &:last-child
+      margin-left -16px

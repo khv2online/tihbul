@@ -1,0 +1,67 @@
+.ApartmentTabs
+	@media $lgPlus
+		display grid
+		grid-template-columns 1fr 335px
+		
+	&_content
+		display none
+		padding 51px 16px 37px
+		background $white
+		
+		@media $smPlus
+			padding 61px 60px 40px
+		
+		@media $lgPlus
+			padding 79px 43px 61px
+	
+	&_listWrapper
+		padding 24px 0 16px
+		background $sandy
+		
+		@media $smPlus
+			padding 26px 0 16px
+		
+		@media $lgPlus
+			padding 88px 0 16px
+	
+	&_listTitle
+		margin-bottom 23px
+		padding-right 16px
+		padding-left 16px
+		font-weight normal
+		color rgba($black, .6)
+		font-size 16px
+		line-height 24px
+		
+		@media $smPlus
+			padding-right 60px
+			padding-left 60px
+			text-align left
+		
+		@media $lgPlus
+			padding-right 31px
+			padding-left 31px
+	
+	&_list
+		list-style none
+	
+	&_item
+		display grid
+		grid-template-columns auto auto
+		justify-content space-between
+		align-items center
+		padding 21px 16px 20px
+		cursor pointer
+		@extend .transition
+		
+		@media $smPlus
+			padding-right 61px
+			padding-left 60px
+		
+		@media $lgPlus
+			padding-right 33px
+			padding-left 31px
+		
+		&:hover,
+		&-active
+			background $white

@@ -77,6 +77,16 @@
 		@media $mdPlus
 			order -1
 	
+	&_subtitle
+		color $white
+		font-size 20px
+		line-height 24px
+		letter-spacing 0.02em
+		
+		@media $smPlus
+			font-size 24px
+			line-height 44px
+	
 	&_title
 		margin-bottom 1px
 		
@@ -122,11 +132,64 @@
 	
 	&_moreBtn
 		justify-self center
-		// margin-bottom -67px
-		
-		// @media $smPlus
-		// 	margin-bottom -103px
 		
 		@media $mdPlus
 			align-self end
-			// margin-bottom -47px
+			
+	&-layoutsSelectionPage
+		margin-bottom -7px
+		background-position -60px -167px
+		background-size 928px auto
+		
+		@media $smPlus
+			background-position -128px -302px
+			background-size 1820px auto
+		
+		@media $mdPlus
+			min-height 420px
+			margin-bottom -56px
+			background-position center 0
+		
+		@media $lgPlus
+			background-size cover
+			background-position center -330px
+		
+		.Header_top
+			margin-bottom 26px
+			
+			@media $smPlus
+				margin-bottom 72px
+		
+		.Header_textWrapper
+			margin-bottom 0
+		
+		.Header_title
+			@media $smPlus
+				margin-bottom 25px
+	
+	&-layoutPage
+		// margin-bottom -35px
+		// padding-bottom 56px
+		padding-bottom 77px
+		background-position -60px -167px
+		background-size 928px auto
+		
+		@media $smPlus
+			padding-bottom 233px
+			background-position -128px -302px
+			background-size 1820px auto
+		
+		@media $mdPlus
+			min-height 420px
+			margin-bottom -56px
+			background-position center 0
+		
+		@media $lgPlus
+			background-size cover
+			background-position center -330px
+		
+		.Header_top
+			margin-bottom 0
+			
+			@media $smPlus
+				margin-bottom 50px

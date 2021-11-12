@@ -1,4 +1,20 @@
 .LayoutSlider
+	position relative
+	z-index 11
+	
+	&_label
+		margin-bottom 16px
+		font-size 20px
+		line-height 24px
+		letter-spacing 0.02em
+		color $white
+		text-align center
+		
+		@media $smPlus
+			margin-bottom 32px
+			font-size 24px
+			line-height 44px
+		
 	&_swiper
 		@media $sm
 			padding-right 32px
@@ -20,3 +36,34 @@
 		
 		@media $lgPlus
 			margin-top 42px
+	
+	&-layoutPage
+		.LayoutSlider_swiper
+			padding-bottom 8px
+		
+		.LayoutSlider_layout
+			margin-right auto
+			margin-left auto
+			
+		.LayoutSlider_pagination
+			margin-top 28px
+			
+			@media $smPlus
+				margin-top 18px
+			
+		.LayoutSlider_prev,
+		.LayoutSlider_next
+			position absolute
+			z-index 10
+			bottom 0
+			
+			@media $smPlus
+				top 0
+				bottom 50px
+				margin auto
+		
+		.LayoutSlider_prev
+			left 0
+		
+		.LayoutSlider_next
+			right 0

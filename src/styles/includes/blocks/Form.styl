@@ -3,6 +3,29 @@
 		display grid
 		gap 33px
 		margin-bottom 40px
+		
+		@media $smPlus
+			margin-bottom 60px
+		
+		@media $lgPlus
+			gap 40px
+			margin-bottom 40px
 	
 	&_actions
 		margin-bottom 23px
+		
+		@media $smPlus
+			margin-bottom 39px
+		
+		@media $lgPlus
+			margin-bottom 49px
+	
+	&-apartmentBooking
+		.Form_items
+			@media $sm
+				max-width 280px
+			
+			@media $lgPlus
+				display grid
+				grid-template-columns repeat(auto-fit, minmax(100px, 1fr))
+				max-width 584px

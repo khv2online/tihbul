@@ -2,17 +2,14 @@
 	padding 182px 0 79px
 	
 	@media $smPlus
-		padding 324px 0
+		padding 324px 0 104px
 	
 	@media $lgPlus
-		padding 350px 0
-	
-	&_wrapper
-		@media $lgPlus
-			display grid
-			grid-template-columns 450px 1fr
-			grid-template-rows 1fr 1fr auto
-			gap 112px
+		display grid
+		grid-template-columns 450px 1fr
+		grid-template-rows 1fr 1fr auto
+		column-gap 112px
+		padding 350px 0 114px
 	
 	&_title
 		margin-bottom 24px
@@ -21,7 +18,9 @@
 			margin-bottom 30px
 		
 		@media $lgPlus
-			margin-bottom 24px
+			align-self end
+			// margin-bottom 24px
+			margin-bottom 40px
 	
 	&_list
 		margin-bottom 32px
@@ -30,6 +29,7 @@
 			margin-bottom 40px
 		
 		@media $lgPlus
+			margin-top -18px
 			margin-bottom 0
 	
 	&_interestRates

@@ -2,7 +2,7 @@ extends layouts/base
 
 block content
 	.HomePage
-		.About
+		.About#About
 			.Container.About_container
 				.About_advantagesWrapper
 					.TextBlock.About_textBlock
@@ -114,18 +114,18 @@ block content
 					button(type="button").SwiperBtn.SwiperBtn-prev.SwiperControls_prevBtn.BenefitsSlider_prev
 					.SwiperPagination.SwiperControls_pagination.BenefitsSlider_pagination
 					button(type="button").SwiperBtn.SwiperBtn-next.SwiperControls_nextBtn.BenefitsSlider_next
-		.Layouts
-			.Container.Layouts_container
-				.Layouts_wrapper.Tabs
-					.Layouts_header
-						.Layouts_label Планировки
-						ul.Tabs_list.Layouts_tabsList
+		.LayoutsSection
+			.Container.LayoutsSection_container
+				.LayoutsSection_wrapper.Tabs
+					.LayoutsSection_header
+						.LayoutsSection_label Планировки
+						ul.Tabs_list.LayoutsSection_tabsList
 							li.Tabs_item.Tabs_item-active(data-index="0") 1-комнатные
 							li.Tabs_item(data-index="1") 2-комнатные
 							li.Tabs_item(data-index="2") 3-комнатные
 							li.Tabs_item(data-index="3") 4-комнатные
-						h2.SectionTitle.Layouts_title Выбирай по душе
-					.Layouts_content.Tabs_container
+						h2.SectionTitle.LayoutsSection_title Выбирай по душе
+					.LayoutsSection_content.Tabs_container
 						- for (var i = 0; i < 4; i++)
 							if i == 0
 								- var style = 'display: block;';
@@ -143,7 +143,7 @@ block content
 														.Layout_imgWrapper
 															img(src="/img/layout.webp").Layout_img
 														h4.Layout_title!= i+1 + '-комнатная <br>тип 24'
-														.Layout_square 32,5 — 33,6 м²
+														.Layout_square 32,5 — 33,6 м#[sup 2]
 														.Layout_price от 4 700 000 ₽
 														a(href="#").BtnDefault.BtnDefault-layout.Layout_btn Отправить заявку
 											- }
@@ -162,112 +162,118 @@ block content
 							p Стены в квартирах выровнены, выполнена стяжка пола со звукоизоляцией, возведены межкомнатные перегородки, установлены пятикамерные стеклопакеты и качественные стальные двери с отделкой из МДФ.
 					.Furnish_imgWrapper.FurnishImgWrapper
 						img(src="/img/furnish_img.svg").FurnishImgWrapper_img
-						a(href="#" data-text="Все стены оштукатурены").BtnPlus.FurnishImgWrapper_btnPlus.FurnishImgWrapper_btnPlus-first.Tooltip
-						a(href="#" data-text="Lorem").BtnPlus.FurnishImgWrapper_btnPlus.FurnishImgWrapper_btnPlus-second.Tooltip
-						a(href="#" data-text="Lorem3").BtnPlus.FurnishImgWrapper_btnPlus.FurnishImgWrapper_btnPlus-third.Tooltip
-		.Mortgage.HomePage_mortgage
-			.Container
-				.Mortgage_wrapper
-					h2.SectionTitle.Mortgage_title Выгодная #[br.hidden-smPlus]ипотека
-					ul.List.Mortgage_list
-						li.List_item Ведущие банки-партнеры
-						li.List_item Индивидуальные &nbsp;условия кредитования
-						li.List_item Персональный менеджер по ипотеке
-						li.List_item Помощь в сборе документов
-						li.List_item Бесплатная консультация юриста
-					.InterestRates.Mortgage_interestRates
-						.InterestRate.InterestRates_item
-							.InterestRate_logoWrapper
-								img(src="/img/sber_logo.svg" alt="Сбер Банк").InterestRate_logo
-							.InterestRate_bankName.hidden-xs Сбербанк России ПАО
-							ul.PaymentConditions.InterestRate_paymentConditions
-								li.PaymentConditions_item
-									.PaymentConditions_label Ежемесячный платёж
-									.PaymentConditions_value 24 363 ₽
-								li.PaymentConditions_item
-									.PaymentConditions_label Ставка
-									.PaymentConditions_value 9,3%
-								li.PaymentConditions_item
-									.PaymentConditions_label Срок
-									.PaymentConditions_value до 30 лет
-						.InterestRate.InterestRates_item
-							.InterestRate_logoWrapper
-								img(src="/img/vtb_logo.svg" alt="ВТБ").InterestRate_logo
-							.InterestRate_bankName.hidden-xs ВТБ (ПАО)
-							ul.PaymentConditions.InterestRate_paymentConditions
-								li.PaymentConditions_item
-									.PaymentConditions_label Ежемесячный платёж
-									.PaymentConditions_value 24 210 ₽
-								li.PaymentConditions_item
-									.PaymentConditions_label Ставка
-									.PaymentConditions_value 9,1%
-								li.PaymentConditions_item
-									.PaymentConditions_label Срок
-									.PaymentConditions_value до 30 лет
-						.InterestRate.InterestRates_item
-							.InterestRate_logoWrapper
-								img(src="/img/uralsib_logo.svg" alt="УралСиб").InterestRate_logo
-							.InterestRate_bankName.hidden-xs Банк Уралсиб ОАО
-							ul.PaymentConditions.InterestRate_paymentConditions
-								li.PaymentConditions_item
-									.PaymentConditions_label Ежемесячный платёж
-									.PaymentConditions_value 24 126 ₽
-								li.PaymentConditions_item
-									.PaymentConditions_label Ставка
-									.PaymentConditions_value 8,99%
-								li.PaymentConditions_item
-									.PaymentConditions_label Срок
-									.PaymentConditions_value до 30 лет
-						.InterestRate.InterestRates_item.hidden-xs
-							.InterestRate_logoWrapper
-								img(src="/img/alpha_bank_logo.svg" alt="УралСиб").InterestRate_logo
-							.InterestRate_bankName.hidden-xs АО «АЛЬФА-БАНК»
-							ul.PaymentConditions.InterestRate_paymentConditions
-								li.PaymentConditions_item
-									.PaymentConditions_label Ежемесячный платёж
-									.PaymentConditions_value 23 747 ₽
-								li.PaymentConditions_item
-									.PaymentConditions_label Ставка
-									.PaymentConditions_value 8,49%
-								li.PaymentConditions_item
-									.PaymentConditions_label Срок
-									.PaymentConditions_value до 30 лет
-					.Mortgage_btnWrapper
-						a(href="#").BtnDefault.BtnDefault-mortgage.Mortgage_btn Подать заявку
-		.Reputation
-			.Container
+						a(href="#").BtnPlus.FurnishImgWrapper_btnPlus.FurnishImgWrapper_btnPlus-first.Tooltip
+							span.Tooltip_text Lorem
+						a(href="#").BtnPlus.FurnishImgWrapper_btnPlus.FurnishImgWrapper_btnPlus-second.Tooltip
+							span.Tooltip_text Все стены оштукатурены
+						a(href="#").BtnPlus.FurnishImgWrapper_btnPlus.FurnishImgWrapper_btnPlus-third.Tooltip
+							span.Tooltip_text Lorem3
+		.Container
+			.Mortgage.HomePage_mortgage
+				h2.SectionTitle.Mortgage_title Выгодная #[br.hidden-smPlus]ипотека
+				ul.List.Mortgage_list
+					li.List_item Ведущие банки-партнеры
+					li.List_item Индивидуальные &nbsp;условия кредитования
+					li.List_item Персональный менеджер по ипотеке
+					li.List_item Помощь в сборе документов
+					li.List_item Бесплатная консультация юриста
+				.InterestRates.Mortgage_interestRates
+					.InterestRate.InterestRates_item
+						.InterestRate_logoWrapper
+							img(src="/img/sber_logo.svg" alt="Сбер Банк").InterestRate_logo
+						.InterestRate_bankName.hidden-xs Сбербанк России ПАО
+						ul.PaymentConditions.InterestRate_paymentConditions
+							li.PaymentConditions_item
+								.PaymentConditions_label Ежемесячный платёж
+								.PaymentConditions_value 24 363 ₽
+							li.PaymentConditions_item
+								.PaymentConditions_label Ставка
+								.PaymentConditions_value 9,3%
+							li.PaymentConditions_item
+								.PaymentConditions_label Срок
+								.PaymentConditions_value до 30 лет
+					.InterestRate.InterestRates_item
+						.InterestRate_logoWrapper
+							img(src="/img/vtb_logo.svg" alt="ВТБ").InterestRate_logo
+						.InterestRate_bankName.hidden-xs ВТБ (ПАО)
+						ul.PaymentConditions.InterestRate_paymentConditions
+							li.PaymentConditions_item
+								.PaymentConditions_label Ежемесячный платёж
+								.PaymentConditions_value 24 210 ₽
+							li.PaymentConditions_item
+								.PaymentConditions_label Ставка
+								.PaymentConditions_value 9,1%
+							li.PaymentConditions_item
+								.PaymentConditions_label Срок
+								.PaymentConditions_value до 30 лет
+					.InterestRate.InterestRates_item
+						.InterestRate_logoWrapper
+							img(src="/img/uralsib_logo.svg" alt="УралСиб").InterestRate_logo
+						.InterestRate_bankName.hidden-xs Банк Уралсиб ОАО
+						ul.PaymentConditions.InterestRate_paymentConditions
+							li.PaymentConditions_item
+								.PaymentConditions_label Ежемесячный платёж
+								.PaymentConditions_value 24 126 ₽
+							li.PaymentConditions_item
+								.PaymentConditions_label Ставка
+								.PaymentConditions_value 8,99%
+							li.PaymentConditions_item
+								.PaymentConditions_label Срок
+								.PaymentConditions_value до 30 лет
+					.InterestRate.InterestRates_item.hidden-xs
+						.InterestRate_logoWrapper
+							img(src="/img/alpha_bank_logo.svg" alt="УралСиб").InterestRate_logo
+						.InterestRate_bankName.hidden-xs АО «АЛЬФА-БАНК»
+						ul.PaymentConditions.InterestRate_paymentConditions
+							li.PaymentConditions_item
+								.PaymentConditions_label Ежемесячный платёж
+								.PaymentConditions_value 23 747 ₽
+							li.PaymentConditions_item
+								.PaymentConditions_label Ставка
+								.PaymentConditions_value 8,49%
+							li.PaymentConditions_item
+								.PaymentConditions_label Срок
+								.PaymentConditions_value до 30 лет
+				.Mortgage_btnWrapper
+					a(href="#").BtnDefault.BtnDefault-mortgage.Mortgage_btn Подать заявку
+		.Reputation.HomePage_reputation
+			.Reputation_textWrapper
 				.Reputation_label О застройщике
 				h2.SectionTitle.Reputation_title Компания #[br.hidden-smPlus]с отличной репутацией
 				.Text.Reputation_text
 					p ЖК «Тихий Бульвар» - это жилой комплекс класса «Комфорт», который расположился в новой развивающейся локации Ленинского района города Кемерово – на Верхнем Бульваре.
-				.Reputation_imgWrapper
-					img(src="/img/reputation_img.webp").Reputation_img
-					img(src="/img/sks_logo.svg").Reputation_logo
+			.Reputation_imgWrapper
+				img(src="/img/reputation_img.webp").Reputation_img
+				img(src="/img/sks_logo.svg").Reputation_logo
 		.Gallery
 			.Container
 				h2.SectionTitle.Gallery_title Ход строительства
-				.Dropdowns.Gallery_dropdowns
-					select.Select(name="month").Dropdowns_item
-						option(value="january") Январь
-						option(value="february") Февраль
-						option(value="march") Март
-						option(value="april") Апрель
-						option(value="mai") Май
-						option(value="june") Июнь
-						option(value="july") Июль
-						option(value="august") Август
-						option(value="september") Сентябрь
-						option(value="october" selected) Октябрь
-						option(value="november") Ноябрь
-						option(value="december") Декабрь
-					select.Select(name="year").Dropdowns_item
-						option(value="2021") 2021
-						option(value="2020") 2020
-						option(value="2019") 2019
-						option(value="2018") 2018
-						option(value="2017") 2017
-						option(value="2016") 2016
-						option(value="2015") 2015
+				.Gallery_dropdownsWrapper
+					.Dropdowns.Gallery_dropdowns
+						select.Select(name="month").Dropdowns_item
+							option(value="january") Январь
+							option(value="february") Февраль
+							option(value="march") Март
+							option(value="april") Апрель
+							option(value="mai") Май
+							option(value="june") Июнь
+							option(value="july") Июль
+							option(value="august") Август
+							option(value="september") Сентябрь
+							option(value="october" selected) Октябрь
+							option(value="november") Ноябрь
+							option(value="december") Декабрь
+						select.Select(name="year").Dropdowns_item
+							option(value="2021") 2021
+							option(value="2020") 2020
+							option(value="2019") 2019
+							option(value="2018") 2018
+							option(value="2017") 2017
+							option(value="2016") 2016
+							option(value="2015") 2015
+					.SwiperControls.SwiperControls-withoutPagination.Gallery_controls.hidden-xs
+						button(type="button").SwiperBtn.SwiperBtn-prev.SwiperControls_prevBtn.Gallery_prev
+						button(type="button").SwiperBtn.SwiperBtn-next.SwiperControls_nextBtn.Gallery_next
 			.GallerySlider.swiper.Gallery_slider
 				.swiper-wrapper.GallerySlider_wrapper
 					.GallerySlider_slide.swiper-slide
@@ -282,15 +288,28 @@ block content
 					.GallerySlider_slide.swiper-slide
 						.GallerySlider_imgWrapper
 							img(src="/img/gallery_img3.webp").GallerySlider_img
-				.SwiperControls.GallerySlider_controls.hidden-smPlus
-					button(type="button").SwiperBtn.SwiperBtn-prev.SwiperControls_prevBtn.GallerySlider_prev
-					.SwiperPagination.SwiperControls_pagination.GallerySlider_pagination
-					button(type="button").SwiperBtn.SwiperBtn-next.SwiperControls_nextBtn.GallerySlider_next
-		.ApartmentBooking.HomePage_apartmentBooking
-			.Container
-				h2.SectionTitle.ApartmentBooking_title Забронируйте первыми #[br]свою квартиру
+					.GallerySlider_slide.swiper-slide
+						.GallerySlider_imgWrapper
+							img(src="/img/gallery_img1.webp").GallerySlider_img
+					.GallerySlider_slide.swiper-slide
+						.GallerySlider_imgWrapper
+							img(src="/img/gallery_img2.webp").GallerySlider_img
+					.GallerySlider_slide.swiper-slide
+						.GallerySlider_imgWrapper
+							img(src="/img/gallery_img1.webp").GallerySlider_img
+					.GallerySlider_slide.swiper-slide
+						.GallerySlider_imgWrapper
+							img(src="/img/gallery_img2.webp").GallerySlider_img
+			.Container.hidden-smPlus
+				.SwiperControls.Gallery_controls
+					button(type="button").SwiperBtn.SwiperBtn-prev.SwiperControls_prevBtn.Gallery_prev
+					.SwiperPagination.SwiperControls_pagination.Gallery_pagination
+					button(type="button").SwiperBtn.SwiperBtn-next.SwiperControls_nextBtn.Gallery_next
+		.Container
+			.ApartmentBooking.HomePage_apartmentBooking
+				h2.SectionTitle.SectionTitle-apartmentBooking.ApartmentBooking_title Забронируйте первыми #[br]свою квартиру
 				.Text.ApartmentBooking_text Менеджер свяжется с вами #[br.hidden-smPlus]и подберет подходящий вариант и условия покупки.
-				form.Form.ApartmentBooking_form(action="#")
+				form.Form.Form-apartmentBooking.ApartmentBooking_form(action="#")
 					.Form_items
 						.Form_item
 							input(type="text" placeholder="Ваше имя*" required).FormText
@@ -302,8 +321,8 @@ block content
 						.Checkbox
 							input(type="checkbox" name="user_agreement" value="yes" id="user_agreement").Checkbox_input
 							label(for="user_agreement").Checkbox_label Я согласен с условиями обработки персональных данных
-				.OvalImg.ApartmentBooking_imgWrapper
-					img(src="/img/apartment_booking_img.webp").OvalImg_img.ApartmentBooking_img
+				.ApartmentBooking_imgWrapper
+					img(src="/img/apartment_booking_img.webp").ApartmentBooking_img
 
 	script(src="/js/jquery-3.6.0.min.js")
 	script(type="application/json" id="infrasObj").
@@ -364,3 +383,4 @@ block content
 		"ico": "/img/map_icons/mall.svg"
 		}]
 	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW93iAmXx_qNSJ-PYhm8MJTA7XZE953V8")
+	script(src="/js/index.js")

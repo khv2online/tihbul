@@ -1,0 +1,150 @@
+extends layouts/layouts_base
+
+block content
+	.LayoutsSelection
+		.ApartmentSearch.LayoutsSelection_apartmentSearch
+			.Container
+				.Filter.ApartmentSearch_filter
+					.Filter_items
+						.FilterElement.Filter_item
+							h3.FilterElement_title Количество комнат
+							.FilterElement_content
+								.FilterCheckboxes
+									.FilterCheckbox.FilterCheckboxes_item
+										input(type="checkbox" name="rooms_number" value="1" id="rooms_number1").FilterCheckbox_input
+										label(for="rooms_number1").FilterCheckbox_label 1
+									.FilterCheckbox.FilterCheckboxes_item
+										input(type="checkbox" name="rooms_number" value="2" id="rooms_number2").FilterCheckbox_input
+										label(for="rooms_number2").FilterCheckbox_label 2
+									.FilterCheckbox.FilterCheckboxes_item
+										input(type="checkbox" name="rooms_number" value="3" id="rooms_number3" checked).FilterCheckbox_input
+										label(for="rooms_number3").FilterCheckbox_label 3
+									.FilterCheckbox.FilterCheckboxes_item
+										input(type="checkbox" name="rooms_number" value="4" id="rooms_number4").FilterCheckbox_input
+										label(for="rooms_number4").FilterCheckbox_label 4
+						.FilterElement.FilterElement-range.Filter_item
+							h3.FilterElement_title Этаж
+							.FilterElement_content
+								.RangeSliderElement
+									.RangeSliderElement_values
+										.RangeSliderElement_from 1
+										.RangeSliderElement_to 14
+									.RangeSlider
+						.FilterElement.FilterElement-range.Filter_item
+							h3.FilterElement_title Площадь, м²
+							.FilterElement_content
+								.RangeSliderElement
+									.RangeSliderElement_values
+										.RangeSliderElement_from 24
+										.RangeSliderElement_to 89
+									.RangeSlider
+						.FilterElement.FilterElement-range.Filter_item
+							h3.FilterElement_title Стоимость, млн ₽
+							.FilterElement_content
+								.RangeSliderElement
+									.RangeSliderElement_values
+										.RangeSliderElement_from 4
+										.RangeSliderElement_to 130
+									.RangeSlider
+					a(href="#").Filter_resetLink Сбросить фильтр
+				.Layouts.ApartmentSearch_layouts
+					.Layouts_label найдено
+					h2.SectionTitle.Layouts_title 20 квартир
+					.Layouts_items
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+						.Layout.Layout-small.Layouts_item
+							.Layout_imgWrapper
+								img(src="/img/layout.webp").Layout_img
+							h4.Layout_title 1-комнатная
+							.Layout_square 33,6 м#[sup 2]
+							.Layout_price 4 100 000 ₽ – 4 790 000 ₽
+					.Layouts_btnWrapper
+						a(href="#").BtnSandy.BtnSandy-layouts показать еще 4 из 20
+		.ApartmentBooking.ApartmentBooking-layoutsSelection.ApartmentBooking-greenWaveBg.LayoutsSelection_apartmentBooking
+			.Container
+				.ApartmentBooking_wrapper
+					h2.SectionTitle.SectionTitle-apartmentBooking.ApartmentBooking_title Забронируйте первыми #[br]свою квартиру
+					.Text.ApartmentBooking_text Менеджер свяжется с вами #[br.hidden-smPlus]и подберет подходящий вариант и условия покупки.
+					form.Form.Form-apartmentBooking.ApartmentBooking_form(action="#")
+						.Form_items
+							.Form_item
+								input(type="text" placeholder="Ваше имя*" required).FormText
+							.Form_item
+								input(type="tel" placeholder="Ваш телефон*" required).FormText
+						.Form_actions
+							button(type="submit").BtnDefault.Form_submitBtn Отправить заявку
+						.Form_agreement
+							.Checkbox
+								input(type="checkbox" name="user_agreement" value="yes" id="user_agreement").Checkbox_input
+								label(for="user_agreement").Checkbox_label Я согласен с условиями обработки персональных данных
+					.ApartmentBooking_imgWrapper
+						img(src="/img/apartment_booking_img.webp").ApartmentBooking_img
+
+	script(src="/js/jquery-3.6.0.min.js")
+	script(src="/js/jquery-ui.min.js")
+	script(src="/js/layouts_selection.js")

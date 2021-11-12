@@ -1,0 +1,38 @@
+.ApartmentTabsSection
+	&_header
+		display grid
+		grid-template-columns 1fr 154px
+		justify-content space-between
+		align-items center
+		margin-bottom 13px
+		padding 0 16px
+		
+		@media $smPlus
+			grid-template-columns 410px 200px
+			margin-bottom 23px
+			padding 0
+			
+		@media $lgPlus
+			grid-template-columns 1fr 337px
+			row-gap 31px
+			margin-bottom 38px
+	
+	&_link
+		color $white
+		font-size 20px
+		line-height 24px
+		letter-spacing 0.02em
+		text-decoration none
+		
+		@media $smPlus
+			font-size 24px
+			line-height 44px
+	
+	&_socIcons
+		@media $smPlus
+			grid-area 1 / 2 / 3 / 3
+			align-self end
+			margin-bottom -3px
+		
+		@media $lgPlus
+			margin-bottom 3px
