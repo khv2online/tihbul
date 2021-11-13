@@ -11,21 +11,21 @@ block content
 							.FilterElement_content
 								.FilterCheckboxes
 									.FilterCheckbox.FilterCheckboxes_item
-										input(type="checkbox" name="rooms_number" value="1" id="rooms_number1").FilterCheckbox_input
+										input(type="checkbox" name="rooms_number[]" value="1" id="rooms_number1").FilterCheckbox_input
 										label(for="rooms_number1").FilterCheckbox_label 1
 									.FilterCheckbox.FilterCheckboxes_item
-										input(type="checkbox" name="rooms_number" value="2" id="rooms_number2").FilterCheckbox_input
+										input(type="checkbox" name="rooms_number[]" value="2" id="rooms_number2").FilterCheckbox_input
 										label(for="rooms_number2").FilterCheckbox_label 2
 									.FilterCheckbox.FilterCheckboxes_item
-										input(type="checkbox" name="rooms_number" value="3" id="rooms_number3" checked).FilterCheckbox_input
+										input(type="checkbox" name="rooms_number[]" value="3" id="rooms_number3" checked).FilterCheckbox_input
 										label(for="rooms_number3").FilterCheckbox_label 3
 									.FilterCheckbox.FilterCheckboxes_item
-										input(type="checkbox" name="rooms_number" value="4" id="rooms_number4").FilterCheckbox_input
+										input(type="checkbox" name="rooms_number[]" value="4" id="rooms_number4").FilterCheckbox_input
 										label(for="rooms_number4").FilterCheckbox_label 4
 						.FilterElement.FilterElement-range.Filter_item
 							h3.FilterElement_title Этаж
 							.FilterElement_content
-								.RangeSliderElement
+								.RangeSliderElement(data-min-value="1" data-max-value="14" data-start-min-value="1" data-start-max-value="14")
 									.RangeSliderElement_values
 										.RangeSliderElement_from 1
 										.RangeSliderElement_to 14
@@ -33,7 +33,7 @@ block content
 						.FilterElement.FilterElement-range.Filter_item
 							h3.FilterElement_title Площадь, м²
 							.FilterElement_content
-								.RangeSliderElement
+								.RangeSliderElement(data-min-value="24" data-max-value="89" data-start-min-value="24" data-start-max-value="89")
 									.RangeSliderElement_values
 										.RangeSliderElement_from 24
 										.RangeSliderElement_to 89
@@ -41,7 +41,7 @@ block content
 						.FilterElement.FilterElement-range.Filter_item
 							h3.FilterElement_title Стоимость, млн ₽
 							.FilterElement_content
-								.RangeSliderElement
+								.RangeSliderElement(data-min-value="4" data-max-value="130" data-start-min-value="4" data-start-max-value="130")
 									.RangeSliderElement_values
 										.RangeSliderElement_from 4
 										.RangeSliderElement_to 130
