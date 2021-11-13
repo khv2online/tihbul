@@ -16,7 +16,12 @@ if (mapObjects) {
 }
 
 const benefitsSlider = new Swiper('.BenefitsSlider', {
-  modules: [Navigation, Pagination],
+  modules: [Navigation, Pagination, EffectFade],
+
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
 
   slidesPerView: 'auto',
   spaceBetween: 20,
@@ -41,6 +46,15 @@ const benefitsSlider = new Swiper('.BenefitsSlider', {
     },
   },
 });
+
+let layoutSectionTabsList = document.querySelector('.LayoutsSection_tabsList');
+if (layoutSectionTabsList) {
+  const tabsListPs = new PerfectScrollbar('.LayoutsSection_tabsList', {
+    wheelSpeed: 2,
+    wheelPropagation: true,
+    minScrollbarLength: 20
+  });
+}
 
 const layoutsSlider = [];
 document.querySelectorAll(".LayoutSlider").forEach(function (item) {

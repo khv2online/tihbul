@@ -1,10 +1,12 @@
 .Tabs
   &_list
+    position relative
     display flex
     align-items center
     gap 16px
     white-space nowrap
     padding-right 16px
+    padding-bottom 14px
     padding-left 16px
     list-style none
     overflow auto
@@ -17,8 +19,8 @@
     @media $lgPlus
       gap 17px
     
-    &::-webkit-scrollbar
-      display none
+    // &::-webkit-scrollbar
+    //   display none
   
   &_item
     padding 9px 24px
