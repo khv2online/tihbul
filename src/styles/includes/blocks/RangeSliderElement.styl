@@ -1,11 +1,22 @@
 .RangeSliderElement
 	&_values
 		display grid
-		grid-template-columns auto auto
+		grid-template-columns 100px 100px
 		justify-content space-between
 		align-items center
 		margin-bottom 19px
-		padding-left 8px
+		margin-right -3px
+		margin-left 8px
 		font-weight 500
 		font-size 16px
 		line-height 20px
+	
+	&_input
+		border none
+		outline none
+		font-weight 500
+		font-family $baseFont
+		font-size 16px
+		
+		&-to
+			text-align right

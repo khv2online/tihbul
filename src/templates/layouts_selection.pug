@@ -25,26 +25,26 @@ block content
 						.FilterElement.FilterElement-range.Filter_item
 							h3.FilterElement_title Этаж
 							.FilterElement_content
-								.RangeSliderElement(data-min-value="1" data-max-value="14" data-start-min-value="1" data-start-max-value="14")
+								.RangeSliderElement
 									.RangeSliderElement_values
-										.RangeSliderElement_from 1
-										.RangeSliderElement_to 14
+										input(type="number" name="floors_number_from" min="1" max="14" data-default-value="1").RangeSliderElement_input.RangeSliderElement_input-from
+										input(type="number" name="floors_number_to" min="1" max="14" data-default-value="14").RangeSliderElement_input.RangeSliderElement_input-to
 									.RangeSlider
 						.FilterElement.FilterElement-range.Filter_item
 							h3.FilterElement_title Площадь, м²
 							.FilterElement_content
-								.RangeSliderElement(data-min-value="24" data-max-value="89" data-start-min-value="24" data-start-max-value="89")
+								.RangeSliderElement
 									.RangeSliderElement_values
-										.RangeSliderElement_from 24
-										.RangeSliderElement_to 89
+										input(type="number" name="square_from" min="24" max="89" data-default-value="24").RangeSliderElement_input.RangeSliderElement_input-from
+										input(type="number" name="square_to" min="24" max="89" data-default-value="89").RangeSliderElement_input.RangeSliderElement_input-to
 									.RangeSlider
 						.FilterElement.FilterElement-range.Filter_item
 							h3.FilterElement_title Стоимость, млн ₽
 							.FilterElement_content
-								.RangeSliderElement(data-min-value="4" data-max-value="130" data-start-min-value="4" data-start-max-value="130")
+								.RangeSliderElement
 									.RangeSliderElement_values
-										.RangeSliderElement_from 4
-										.RangeSliderElement_to 130
+										input(type="number" name="cost_from" min="4" max="130" data-default-value="4").RangeSliderElement_input.RangeSliderElement_input-from
+										input(type="number" name="cost_to" min="4" max="130" data-default-value="130").RangeSliderElement_input.RangeSliderElement_input-to
 									.RangeSlider
 					a(href="#").Filter_resetLink Сбросить фильтр
 				.Layouts.ApartmentSearch_layouts
