@@ -171,6 +171,14 @@ function serve() {
     reloadDebounce: 100,
     server: {
       baseDir: distDir,
+      serveStaticOptions: {
+        etag: false,
+        cacheControl: false,
+      },
+    },
+    middleware: function (req, res, next) {
+      res.setHeader("Cache-Control", "no-store, must-revalidate");
+      next();
     },
   });
 }
