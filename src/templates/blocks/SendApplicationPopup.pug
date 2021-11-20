@@ -1,0 +1,19 @@
+.Popup#SendApplicationPopup
+	a(href="#" data-action="closePopup").Popup_close
+	.Popup_imgWrapper
+		img(src="/img/residental_area.webp").Popup_img.hidden-mdPlus
+		img(src="/img/resident_area_desktop.webp").Popup_img.hidden-smMinus
+	.Popup_textWrapper
+		h2.Popup_title Консультация по рассрочке
+		.Popup_text
+			p Заполните форму, чтобы получить всю интересующую вас информацию об объекте
+		form.Form.Form-consult(action="#")
+			.Form_items
+				.Form_item
+					input(type="text" placeholder="Как вас зовут" required).FormText.FormText-consult
+				.Form_item
+					input(type="tel" placeholder="Ваш телефон" required).FormText.FormText-consult
+			.Form_actions
+				button(type="submit").BtnDefault.BtnDefault-consultForm.Form_submitBtn Отправить
+			.Form_note
+				p Отправляя форму, вы подтверждаете своё согласие на обработку персональных данных

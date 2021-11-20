@@ -20,13 +20,40 @@ closeMobileNavigation.addEventListener('click', function (e) {
   e.preventDefault();
 });
 
+document.addEventListener('click', function (e) {
+  let openPopupLink = e.target.closest('[data-action="openPopup"]');
+
+  if (!openPopupLink) return;
+
+  let popupSelector = openPopupLink.getAttribute('href');
+  let popup = document.querySelector(popupSelector);
+
+  popup.classList.add('Popup-visible');
+  document.body.style.overflow = 'hidden';
+
+  e.preventDefault();
+});
+
+document.addEventListener('click', function (e) {
+  let closePopupLink = e.target.closest('[data-action="closePopup"]');
+
+  if (!closePopupLink) return;
+
+  let popup = closePopupLink.closest('.Popup');
+
+  popup.classList.remove('Popup-visible');
+  document.body.style.overflow = '';
+
+  e.preventDefault();
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   "use strict";
 
   anchor.addEventListener("click", function (event) {
     event.preventDefault();
 
-    if (this.getAttribute("href") === '#') return;
+    if (this.getAttribute("href") == '#' || this.dataset.action !== undefined) return;
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth",

@@ -145,7 +145,7 @@ block content
 														h4.Layout_title!= i+1 + '-комнатная <br>тип 24'
 														.Layout_square 32,5 — 33,6 м#[sup 2]
 														.Layout_price от 4 700 000 ₽
-														a(href="#").BtnDefault.BtnDefault-layout.Layout_btn Отправить заявку
+														a(href="#SendApplicationPopup" data-action="openPopup").BtnDefault.BtnDefault-layout.Layout_btn Отправить заявку
 											- }
 										.SwiperControls.LayoutSlider_controls.hidden-smPlus
 											button(type="button").SwiperBtn.SwiperBtn-prev.SwiperControls_prevBtn.LayoutSlider_prev
@@ -323,6 +323,7 @@ block content
 							label(for="user_agreement").Checkbox_label Я согласен с условиями обработки персональных данных
 				.ApartmentBooking_imgWrapper
 					img(src="/img/apartment_booking_img.webp").ApartmentBooking_img
+	include ./blocks/SendApplicationPopup
 
 	script(src="/js/jquery-3.6.0.min.js")
 	script(type="application/json" id="infrasObj").

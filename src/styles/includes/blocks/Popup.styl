@@ -1,0 +1,76 @@
+.Popup
+	position fixed
+	z-index 100
+	top 0
+	right 0
+	bottom 0
+	left 0
+	background $white
+	opacity 0
+	visibility hidden
+	overflow auto
+	@extend .transition
+	
+	@media $mdPlus
+		display grid
+		grid-template-columns 1fr 1fr
+		align-items center
+	
+	&_imgWrapper
+		@media $mdPlus
+			display grid
+			justify-content center
+			align-content end
+			overflow hidden
+			height 100vh
+	
+	&_img
+		display block
+		
+		@media $smMinus
+			width 100%
+		
+		@media $mdPlus
+			max-width none
+			height 100vh
+	
+	&_close
+		position absolute
+		top 14px
+		right 14px
+		width 24px
+		height 24px
+		background url("data:image/svg+xml,%3Csvg width='14' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.221 7L0 .78.78 0l6.999 7-7 7L0 13.22 6.221 7z' fill='%23443732'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.779 7L14 13.22l-.78.78-7-7 7-7 .78.78L7.779 7z' fill='%23443732'/%3E%3C/svg%3E") center center / cover no-repeat
+		
+		@media $mdPlus
+			top 24px
+			right 24px
+	
+	&_textWrapper
+		padding 35px 20px
+		
+		@media $smMinus
+			width 480px
+			max-width 100%
+			margin-right auto
+			margin-left auto
+		
+		@media $mdPlus
+			padding 35px 85px
+	
+	&_title
+		margin-bottom 10px
+		font-weight normal
+		font-size 32px
+		
+		@media $mdPlus
+			font-size 48px
+	
+	&_text
+		margin-bottom 30px
+		font-size 15px
+		line-height 26px
+	
+	&-visible
+		opacity 1
+		visibility visible
